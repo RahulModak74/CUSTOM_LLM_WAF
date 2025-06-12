@@ -128,22 +128,12 @@ curl -H "X-Original-URI: /" http://localhost:8080/auth
 
 ## 🌐 Client Machine Setup (Nginx + Application)
 
-### Step 1: Install Nginx
-```bash
-# Update system
-sudo apt update && sudo apt upgrade -y
+### Step 1: Install Nginx(ASSUMES YOU HAVE A WORKING WEB APPLICAION THAT NEEDS PROTECTION AND USES NGINX)
 
-# Install Nginx
-sudo apt install nginx -y
-
-# Enable Nginx
-sudo systemctl enable nginx
-sudo systemctl start nginx
-```
 
 ### Step 2: Configure Nginx with WAF Integration
 
-**Important:** We'll configure the existing `nodeApp` file instead of creating a new one.
+**Important:** We'll configure the existing nginx  `config` file (which we have called nodeApp) instead of creating a new one.
 
 Edit the existing Nginx configuration:
 ```bash
