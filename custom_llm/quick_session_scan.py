@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 WAF Session Data Analyzer for sample_session.csv with dynamic_quant integration
-Usage: python session_runner.py
+Usage: python quick_session_scan.py
 """
 
 import pandas as pd
