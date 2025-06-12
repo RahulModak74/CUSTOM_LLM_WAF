@@ -3,6 +3,14 @@ this script runs with sample_session.csv file and predicts attacks using quanitz
 Run it as below.. 
 
 python3 quick_session_scan.py 
+
+
+
+Output
+
+
+
+
 🛡️  WAF Session Data Analyzer with Dynamic Quantizer
 ============================================================
 🔍 Analyzing WAF session data from sample_session.csv...
