@@ -289,8 +289,9 @@ The WAF includes built-in rules for:
 ### Session Data Export
 ```bash
 # Export session data to CSV
-sqlite3 -header -csv sessions.db "SELECT * FROM sessions;" > sessions.csv
+sqlite3 -header -csv sessions.db "SELECT * FROM sessions;" > sample_session.csv
 ```
+After exporting the file (hardcoded sample_session.csv), you can directly call quick_session_scan.py (from custom_llm folder in this repo) to get LLM analysis of the results
 
 ---
 
