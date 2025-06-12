@@ -128,7 +128,7 @@ curl -H "X-Original-URI: /" http://localhost:8080/auth
 
 ## 🌐 Client Machine Setup (Nginx + Application)
 
-### Step 1: Install Nginx(ASSUMES YOU HAVE A WORKING WEB APPLICAION THAT NEEDS PROTECTION AND USES NGINX)
+### Step 1: Existing Nginx(ASSUMES YOU HAVE A WORKING WEB APPLICAION THAT NEEDS PROTECTION AND USES NGINX)
 
 
 ### Step 2: Configure Nginx with WAF Integration
