@@ -397,8 +397,7 @@ screen -X -S nginx-waf quit
 
 ## 📝 License
 
-This project is licensed under Fair Use principles for educational and research purposes. Commercial use requires explicit permission from the development team. SSPL license
-
+Commercial use allowed under SSPL license. We welcome you use and update it as per your requriements
 ## 🤝 Contributing
 
 Currently, this project is maintained by our internal development team.For questions or support, please contact the development team.
