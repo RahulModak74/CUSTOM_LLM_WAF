@@ -1,4 +1,4 @@
-# Nginx Security WAF - Installation Guide
+# Nginx Security AI first WAF - Installation Guide
 
 A Python-based Web Application Firewall (WAF) that integrates with Nginx using `auth_request` module to provide real-time threat detection and blocking.
 
