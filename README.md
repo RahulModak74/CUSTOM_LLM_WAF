@@ -1,4 +1,4 @@
-# Nginx Security AI first WAF - Installation Guide
+# Session Intelligence + Custom LLM python WAF - Installation Guide (Apache 2.0)
 
 A Python-based Web Application Firewall (WAF) that integrates with Nginx using `auth_request` module to provide real-time threat detection and blocking.
 
