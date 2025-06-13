@@ -11,6 +11,8 @@ from datasets import Dataset
 import warnings
 warnings.filterwarnings("ignore")
 
+""" This is replacement for dynamic_quant.py with more detections"""
+
 class CyberSecurityDataGenerator:
     """Enhanced cybersecurity training data generator with more realistic patterns"""
     
