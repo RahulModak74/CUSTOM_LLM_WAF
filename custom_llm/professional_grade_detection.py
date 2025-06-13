@@ -1,11 +1,54 @@
-"""Pl use these functions in dynamic_quant/n1 when running proferssionally"""
-# Enhanced patterns for professional ModSecurity environments
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import numpy as np
+from typing import Dict, List, Tuple
+import copy
+import json
+import re
+import warnings
+warnings.filterwarnings("ignore")
 
 class ProfessionalWAFDetector:
     """Professional-grade WAF detector matching ModSecurity CRS standards"""
     
     def __init__(self):
-        # Advanced SQL Injection patterns (beyond basic ones)
+        # Basic attack patterns (from your original)
+        self.basic_patterns = [
+            # SQL Injection patterns
+            r"('|\").*(\bor\b|\bunion\b|\bselect\b|\bdrop\b|\binsert\b|\bdelete\b)",
+            r";\s*--",
+            r"('|\").*('|\")\s*=\s*('|\")",
+            
+            # XSS patterns
+            r"<\s*script[^>]*>",
+            r"javascript\s*:",
+            r"<\s*iframe[^>]*>",
+            r"onerror\s*=",
+            r"onload\s*=",
+            r"alert\s*\(",
+            
+            # Command injection
+            r";\s*(cat|ls|dir|whoami|id|pwd)",
+            r"\|\s*(nc|netcat|curl|wget)",
+            r"&&\s*(rm|del|format)",
+            r"`[^`]+`",
+            r"\$\([^)]+\)",
+            
+            # Path traversal
+            r"\.\./",
+            r"\.\.\\",
+            r"%2e%2e%2f",
+            r"\.\.%2f",
+            
+            # LDAP injection
+            r"\*\)\(&",
+            r"\)\(&",
+            r"\*\)\(\|"
+        ]
+        
+        # Advanced attack patterns (professional grade)
         self.advanced_sqli_patterns = [
             # Unicode/Encoding evasions
             r"%u[0-9a-f]{4}(union|select|drop|insert|delete)",
@@ -20,17 +63,6 @@ class ProfessionalWAFDetector:
             r"--[^\r\n]*(union|select|drop|insert|delete)",
             r"#[^\r\n]*(union|select|drop|insert|delete)",
             
-            # Hex encoding
-            r"0x[0-9a-f]+(union|select|drop|insert|delete)",
-            
-            # Conditional attacks
-            r"(?i)(if|case|when|then|else).*?(union|select|drop)",
-            r"(?i)(sleep|benchmark|waitfor|delay)\s*\(",
-            
-            # Boolean-based blind SQLi
-            r"(?i)(and|or)\s+\d+\s*[=<>!]+\s*\d+",
-            r"(?i)(and|or)\s+\w+\s*[=<>!]+\s*\w+",
-            
             # Time-based blind SQLi
             r"(?i)(sleep|pg_sleep|waitfor|delay)\s*\(\s*\d+\s*\)",
             r"(?i)benchmark\s*\(\s*\d+\s*,",
@@ -38,61 +70,72 @@ class ProfessionalWAFDetector:
             # NoSQL injection patterns
             r"(?i)\$where.*?function",
             r"(?i)\$regex.*?\$options",
-            r"(?i)javascript:.*?(eval|function)",
             r"(?i)\$gt:\s*\d+",
-            r"(?i)\$lt:\s*\d+",
             r"(?i)\$ne:\s*null",
+            
+            # Boolean-based blind SQLi
+            r"(?i)(and|or)\s+\d+\s*[=<>!]+\s*\d+",
         ]
         
         # Advanced XSS patterns
         self.advanced_xss_patterns = [
-            # Event handlers
+            # Event handlers (comprehensive)
             r"(?i)on(load|error|focus|blur|change|submit|reset|click|dblclick|mouseover|mouseout|mousemove|mousedown|mouseup|keydown|keyup|keypress|resize|scroll)\s*=",
             
-            # JavaScript protocols
-            r"(?i)javascript\s*:",
-            r"(?i)vbscript\s*:",
-            r"(?i)data\s*:\s*text/html",
-            r"(?i)data\s*:\s*image/svg\+xml",
-            
             # Advanced script injection
-            r"(?i)<\s*script[^>]*?>.*?</\s*script\s*>",
             r"(?i)<\s*svg[^>]*?onload\s*=",
             r"(?i)<\s*iframe[^>]*?src\s*=\s*[\"']?javascript:",
             r"(?i)<\s*object[^>]*?data\s*=\s*[\"']?javascript:",
-            r"(?i)<\s*embed[^>]*?src\s*=\s*[\"']?javascript:",
             
             # DOM manipulation
             r"(?i)document\.(write|writeln|createElement|getElementById)",
             r"(?i)window\.(open|location|eval)",
             r"(?i)eval\s*\(",
             r"(?i)setTimeout\s*\(",
-            r"(?i)setInterval\s*\(",
-            
-            # CSS injection
-            r"(?i)expression\s*\(",
-            r"(?i)@import\s+[\"']?javascript:",
-            r"(?i)background(-image)?\s*:\s*url\s*\(\s*[\"']?javascript:",
             
             # Encoded XSS
             r"(?i)%3c\s*script",
             r"(?i)&lt;\s*script",
             r"(?i)\\x3c\s*script",
             r"(?i)\\u003c\s*script",
+            
+            # Data URIs
+            r"(?i)data\s*:\s*text/html",
+            r"(?i)data\s*:\s*image/svg\+xml",
+        ]
+        
+        # Server-Side Template Injection (SSTI)
+        self.ssti_patterns = [
+            # Jinja2/Django/Flask
+            r"\{\{.*?(config|request|session|g|url_for|get_flashed_messages).*?\}\}",
+            r"\{\{.*?__class__.*?\}\}",
+            r"\{\{.*?__mro__.*?\}\}",
+            r"\{\{.*?__subclasses__.*?\}\}",
+            
+            # Twig
+            r"\{\{.*?_self.*?\}\}",
+            r"\{\{.*?dump\(.*?\).*?\}\}",
+            
+            # Expression Language (EL) - Spring/Java
+            r"\$\{.*?(Runtime|ProcessBuilder|exec).*?\}",
+            r"#\{.*?(Runtime|ProcessBuilder).*?\}",
+            
+            # Freemarker
+            r"<#.*?#>",
+            r"\$\{.*?new\s+.*?\}",
+        ]
+        
+        # XXE (XML External Entity) patterns
+        self.xxe_patterns = [
+            r"<!ENTITY\s+\w+\s+SYSTEM\s+[\"'][^\"']*[\"']>",
+            r"<!DOCTYPE\s+\w+\s+\[.*?<!ENTITY.*?\]>",
+            r"file://",
+            r"(?i)<!entity.*?system.*?>",
+            r"(?i)<!doctype.*?\[.*?<!entity.*?\]>",
         ]
         
         # Advanced Path Traversal
         self.advanced_path_traversal = [
-            # Various encoding methods
-            r"\.\.[\\/]",
-            r"%2e%2e[\\/]",
-            r"\.\.%2f",
-            r"\.\.%5c",
-            r"%2e%2e%2f",
-            r"%2e%2e%5c",
-            r"..%252f",
-            r"..%255c",
-            
             # Double encoding
             r"%252e%252e%252f",
             r"%252e%252e%255c",
@@ -101,154 +144,102 @@ class ProfessionalWAFDetector:
             r"\.\.[\u002f\u005c]",
             r"\.\.[\uff0f\uff3c]",
             
-            # URL encoding variations
-            r"\.\.[/\\]",
-            r"\.\.\x2f",
-            r"\.\.\x5c",
-            
             # Filter bypass attempts
             r"....[/\\]",
             r"..;[/\\]",
             r"..\x00[/\\]",
             
-            # Windows/Unix path combinations
-            r"(\.\.[\\/]){2,}(etc|boot|windows|system32)",
-            r"(\.\.[\\/]){2,}(passwd|shadow|hosts|config)",
+            # Specific file targeting
+            r"(\.\.[\\/]){2,}(etc/passwd|windows/system32|boot\.ini)",
         ]
         
         # Advanced Command Injection
-        self.advanced_command_injection = [
-            # Command separators
-            r"[;&|`]\s*(cat|ls|dir|type|more|less|head|tail|whoami|id|pwd|uname|ps|netstat|ifconfig|ipconfig)",
+        self.advanced_cmd_patterns = [
+            # Backtick and command substitution
+            r"`[^`]*(whoami|id|pwd|uname|ps|netstat)[^`]*`",
+            r"\$\([^)]*(whoami|id|pwd|uname|ps|netstat)[^)]*\)",
             
-            # Backtick execution
-            r"`[^`]*(cat|ls|dir|type|whoami|id|pwd|uname|ps|netstat|ifconfig|ipconfig)[^`]*`",
-            
-            # Command substitution
-            r"\$\([^)]*(cat|ls|dir|type|whoami|id|pwd|uname|ps|netstat|ifconfig|ipconfig)[^)]*\)",
-            
-            # Piping and redirection
-            r"\|\s*(nc|netcat|telnet|ncat|socat|bash|sh|cmd|powershell)",
-            r">\s*/dev/tcp/",
-            r">\s*/dev/udp/",
-            
-            # Environment variable manipulation
+            # Environment variables
             r"\$\{[^}]*\}",
             r"\$[A-Z_][A-Z0-9_]*",
             
-            # Binary execution
-            r"/bin/(sh|bash|csh|tcsh|zsh|ksh)",
-            r"/usr/bin/(perl|python|ruby|php|node|java)",
+            # Binary execution paths
+            r"/bin/(sh|bash|csh|tcsh|zsh)",
+            r"/usr/bin/(perl|python|ruby|php|node)",
             r"cmd\.exe",
             r"powershell\.exe",
-            
-            # File operations
-            r"(echo|printf|cat)\s+.*?>\s*",
-            r"(wget|curl|fetch)\s+.*?-O",
-            r"(chmod|chown|chgrp)\s+[0-9]{3,4}",
         ]
         
-        # Server-Side Template Injection (SSTI)
-        self.ssti_patterns = [
-            # Jinja2/Django
-            r"\{\{.*?\}\}",
-            r"\{%.*?%\}",
-            r"\{\{.*?(config|request|session|g).*?\}\}",
+        # Bot patterns (from your original plus advanced)
+        self.bot_patterns = [
+            # Basic bots
+            r"python-requests",
+            r"urllib",
+            r"wget",
+            r"curl",
+            r"scrapy",
             
-            # Twig
-            r"\{\{.*?_self.*?\}\}",
-            r"\{\{.*?dump\(.*?\).*?\}\}",
+            # Security scanners
+            r"nikto",
+            r"sqlmap",
+            r"burp",
+            r"owasp",
+            r"nessus",
+            r"acunetix",
             
-            # Smarty
-            r"\{.*?\$smarty.*?\}",
-            r"\{php\}.*?\{/php\}",
+            # Advanced scanners
+            r"nuclei",
+            r"ffuf",
+            r"gobuster",
+            r"wfuzz",
+            r"feroxbuster",
             
-            # Freemarker
-            r"<#.*?#>",
-            r"\$\{.*?\}",
-            
-            # Velocity
-            r"#set\s*\(",
-            r"#foreach\s*\(",
-            r"\$\{.*?\}",
-            
-            # Expression Language (EL)
-            r"\$\{.*?(Runtime|ProcessBuilder|exec).*?\}",
-        ]
-        
-        # XXE (XML External Entity) patterns
-        self.xxe_patterns = [
-            r"<!ENTITY\s+\w+\s+SYSTEM\s+[\"'][^\"']*[\"']>",
-            r"<!ENTITY\s+\w+\s+PUBLIC\s+[\"'][^\"']*[\"']\s+[\"'][^\"']*[\"']>",
-            r"<!DOCTYPE\s+\w+\s+\[.*?<!ENTITY.*?\]>",
-            r"&\w+;",
-            r"file://",
-            r"http://.*?/etc/passwd",
-            r"gopher://",
-            r"ftp://.*?/etc/passwd",
-        ]
-        
-        # HTTP Request Smuggling
-        self.request_smuggling_patterns = [
-            r"Transfer-Encoding:\s*chunked",
-            r"Content-Length:\s*\d+.*?Content-Length:\s*\d+",
-            r"Transfer-Encoding:.*?Transfer-Encoding:",
-            r"\r\n\r\n[A-Fa-f0-9]+\r\n",
-            r"Content-Length:\s*0\r\n\r\n[^\r\n]",
-        ]
-        
-        # Advanced Bot Detection (beyond basic)
-        self.advanced_bot_patterns = [
             # Headless browsers
             r"headless",
             r"phantomjs",
             r"selenium",
             r"puppeteer",
             r"playwright",
-            r"chromedriver",
-            r"geckodriver",
-            
-            # Automated testing tools
-            r"postman",
-            r"insomnia",
-            r"httpie",
-            r"rest-client",
-            
-            # Missing or suspicious headers
-            r"user-agent:\s*$",  # Empty user agent
-            r"user-agent:\s*-$",  # Dash user agent
-            
-            # Reconnaissance tools
-            r"whatweb",
-            r"wappalyzer",
-            r"builtwith",
-            r"shodan",
-            
-            # Fuzzing tools
-            r"ffuf",
-            r"wfuzz",
-            r"dirb",
-            r"gobuster",
-            r"feroxbuster",
+        ]
+        
+        # IP reputation patterns
+        self.suspicious_ip_patterns = [
+            r"146\.148\.",  # From your data
+            r"23\.27\.",    # From your data
+            r"176\.65\.",   # From your data
         ]
         
         # Compile all patterns
+        self.compiled_basic = [re.compile(p, re.IGNORECASE) for p in self.basic_patterns]
         self.compiled_advanced_sqli = [re.compile(p, re.IGNORECASE) for p in self.advanced_sqli_patterns]
         self.compiled_advanced_xss = [re.compile(p, re.IGNORECASE) for p in self.advanced_xss_patterns]
-        self.compiled_advanced_path = [re.compile(p, re.IGNORECASE) for p in self.advanced_path_traversal]
-        self.compiled_advanced_cmd = [re.compile(p, re.IGNORECASE) for p in self.advanced_command_injection]
         self.compiled_ssti = [re.compile(p, re.IGNORECASE) for p in self.ssti_patterns]
         self.compiled_xxe = [re.compile(p, re.IGNORECASE) for p in self.xxe_patterns]
-        self.compiled_smuggling = [re.compile(p, re.IGNORECASE) for p in self.request_smuggling_patterns]
-        self.compiled_advanced_bot = [re.compile(p, re.IGNORECASE) for p in self.advanced_bot_patterns]
+        self.compiled_advanced_path = [re.compile(p, re.IGNORECASE) for p in self.advanced_path_traversal]
+        self.compiled_advanced_cmd = [re.compile(p, re.IGNORECASE) for p in self.advanced_cmd_patterns]
+        self.compiled_bot_patterns = [re.compile(p, re.IGNORECASE) for p in self.bot_patterns]
+        self.compiled_ip_patterns = [re.compile(p) for p in self.suspicious_ip_patterns]
     
-    def detect_professional_attacks(self, request: str) -> Tuple[bool, str, int]:
+    def detect_attack(self, request: str) -> Tuple[bool, str]:
         """
-        Professional attack detection with scoring
-        Returns: (is_malicious, detection_message, severity_score)
+        Professional attack detection with comprehensive coverage
+        Compatible with your existing runner interface
         """
         severity_score = 0
         detections = []
+        
+        # Basic attack detection (maintains backward compatibility)
+        for i, pattern in enumerate(self.compiled_basic):
+            if pattern.search(request):
+                attack_types = {
+                    0: "SQL Injection", 1: "SQL Injection", 2: "SQL Injection",
+                    3: "XSS", 4: "XSS", 5: "XSS", 6: "XSS", 7: "XSS", 8: "XSS",
+                    9: "Command Injection", 10: "Command Injection", 11: "Command Injection", 12: "Command Injection", 13: "Command Injection",
+                    14: "Path Traversal", 15: "Path Traversal", 16: "Path Traversal", 17: "Path Traversal",
+                    18: "LDAP Injection", 19: "LDAP Injection", 20: "LDAP Injection"
+                }
+                attack_type = attack_types.get(i, "Unknown Attack")
+                return True, f"MALICIOUS - {attack_type} Detected - BLOCK"
         
         # Advanced SQL Injection detection
         for pattern in self.compiled_advanced_sqli:
@@ -261,6 +252,20 @@ class ProfessionalWAFDetector:
         for pattern in self.compiled_advanced_xss:
             if pattern.search(request):
                 detections.append("Advanced XSS")
+                severity_score += 4
+                break
+        
+        # SSTI detection
+        for pattern in self.compiled_ssti:
+            if pattern.search(request):
+                detections.append("Server-Side Template Injection")
+                severity_score += 5
+                break
+        
+        # XXE detection
+        for pattern in self.compiled_xxe:
+            if pattern.search(request):
+                detections.append("XML External Entity (XXE)")
                 severity_score += 4
                 break
         
@@ -278,41 +283,81 @@ class ProfessionalWAFDetector:
                 severity_score += 5
                 break
         
-        # SSTI detection
-        for pattern in self.compiled_ssti:
+        # Bot/Scanner detection
+        for pattern in self.compiled_bot_patterns:
             if pattern.search(request):
-                detections.append("Server-Side Template Injection")
-                severity_score += 5
-                break
-        
-        # XXE detection
-        for pattern in self.compiled_xxe:
-            if pattern.search(request):
-                detections.append("XML External Entity (XXE)")
-                severity_score += 4
-                break
-        
-        # Request smuggling
-        for pattern in self.compiled_smuggling:
-            if pattern.search(request):
-                detections.append("HTTP Request Smuggling")
-                severity_score += 5
-                break
-        
-        # Advanced bot detection
-        for pattern in self.compiled_advanced_bot:
-            if pattern.search(request):
-                detections.append("Advanced Bot/Scanner")
+                detections.append("BOT_SCANNER")
                 severity_score += 2
                 break
         
-        if detections:
-            return True, f"MALICIOUS - {', '.join(detections)} - BLOCK (Score: {severity_score})", severity_score
+        # Suspicious IP detection
+        for pattern in self.compiled_ip_patterns:
+            if pattern.search(request):
+                detections.append("SUSPICIOUS_IP")
+                severity_score += 2
+                break
         
-        return False, "SAFE - No Advanced Threats Detected - ALLOW", 0
+        # Additional automated request detection
+        if self._is_automated_request(request):
+            detections.append("AUTOMATED_BOT")
+            severity_score += 2
+        
+        # Return detection result
+        if detections:
+            if severity_score >= 8:
+                risk_level = "CRITICAL"
+            elif severity_score >= 5:
+                risk_level = "HIGH"
+            elif severity_score >= 3:
+                risk_level = "MEDIUM"
+            else:
+                risk_level = "LOW"
+            
+            return True, f"MALICIOUS - {', '.join(detections)} - {risk_level} Risk (Score: {severity_score}) - BLOCK"
+        
+        return False, "SAFE - No Threat Detected - ALLOW"
+    
+    def _is_automated_request(self, request: str) -> bool:
+        """Enhanced automated request detection"""
+        bot_indicators = [
+            # No referer + scripting user agent
+            ("python-requests" in request.lower() and "referer:" not in request.lower()),
+            ("curl" in request.lower() and "referer:" not in request.lower()),
+            
+            # Missing common browser headers
+            ("user-agent:" in request.lower() and 
+             not any(browser in request.lower() for browser in ["mozilla", "chrome", "firefox", "safari", "edge"])),
+            
+            # Suspicious user agent patterns
+            any(suspicious in request.lower() for suspicious in [
+                "python/", "go-http-client", "java/", "php/", "ruby/", 
+                "perl/", "node/", "axios/", "okhttp/", "apache-httpclient"
+            ]),
+            
+            # Empty or minimal user agents
+            re.search(r"user-agent:\s*$", request.lower()),
+            re.search(r"user-agent:\s*-\s*$", request.lower()),
+            
+            # High frequency scanning patterns
+            re.search(r"/(admin|login|wp-admin|phpmyadmin|admin\.php)", request.lower()),
+        ]
+        
+        return any(bot_indicators)
 
-# Professional test cases that would bypass basic detection
-professional_test_cases = [
+# Professional test cases for comprehensive testing
+professional_waf_test_cases = [
+    # Basic attacks (for backward compatibility)
+    {
+        'request': "GET /search?q=' OR '1'='1",
+        'expected': 'malicious',
+        'attack_type': 'basic_sqli'
+    },
+    {
+        'request': "POST /comment data=<script>alert('XSS')</script>",
+        'expected': 'malicious', 
+        'attack_type': 'basic_xss'
+    },
+    
     # Advanced SQL Injection
     {
         'request': "GET /search?q=1' /**/UNION/**/SELECT/**/ user,pass /**/FROM/**/ admin--",
@@ -320,14 +365,14 @@ professional_test_cases = [
         'attack_type': 'advanced_sqli'
     },
     {
-        'request': "POST /login data=username=admin&password=' or 1=1#",
+        'request': "POST /login data=username=admin&password=' or SLEEP(5)#",
         'expected': 'malicious', 
         'attack_type': 'advanced_sqli'
     },
     {
-        'request': "GET /user?id=1' AND (SELECT SLEEP(5))--",
+        'request': "GET /api?filter={\"$where\": \"function() { return true; }\"}",
         'expected': 'malicious',
-        'attack_type': 'advanced_sqli'
+        'attack_type': 'nosql_injection'
     },
     
     # Advanced XSS
@@ -337,9 +382,9 @@ professional_test_cases = [
         'attack_type': 'advanced_xss'
     },
     {
-        'request': "POST /comment data=<img src=x onerror=eval(atob('YWxlcnQoJ1hTUycp'))>",
+        'request': "POST /comment data=%3Cscript%3Ealert('encoded')%3C/script%3E",
         'expected': 'malicious',
-        'attack_type': 'advanced_xss'
+        'attack_type': 'encoded_xss'
     },
     
     # SSTI
@@ -349,22 +394,56 @@ professional_test_cases = [
         'attack_type': 'ssti'
     },
     {
-        'request': "POST /render data=${T(java.lang.Runtime).getRuntime().exec('id')}",
+        'request': "POST /render data={{request.__class__.__mro__[1].__subclasses__()}}",
         'expected': 'malicious',
-        'attack_type': 'ssti'
+        'attack_type': 'ssti_advanced'
     },
     
     # XXE
     {
-        'request': 'POST /xml data=<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///etc/passwd">]><foo>&xxe;</foo>',
+        'request': 'POST /xml data=<!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///etc/passwd">]><foo>&xxe;</foo>',
         'expected': 'malicious',
         'attack_type': 'xxe'
     },
     
-    # Request Smuggling
+    # Advanced Path Traversal
     {
-        'request': 'POST /api HTTP/1.1\r\nContent-Length: 44\r\nTransfer-Encoding: chunked\r\n\r\n0\r\n\r\nGET /admin HTTP/1.1\r\nHost: vulnerable.com\r\n\r\n',
+        'request': "GET /file?path=%252e%252e%252f%252e%252e%252fetc%252fpasswd",
         'expected': 'malicious',
-        'attack_type': 'request_smuggling'
+        'attack_type': 'advanced_path_traversal'
+    },
+    
+    # Advanced Command Injection
+    {
+        'request': "GET /exec?cmd=`whoami`",
+        'expected': 'malicious',
+        'attack_type': 'advanced_cmd_injection'
+    },
+    
+    # Bot Detection
+    {
+        'request': "GET /api/test User-Agent: python-requests/2.32.3",
+        'expected': 'malicious',
+        'attack_type': 'bot_scanner'
+    },
+    {
+        'request': "GET /admin User-Agent: sqlmap/1.6.12",
+        'expected': 'malicious',
+        'attack_type': 'security_scanner'
+    },
+    
+    # Benign requests
+    {
+        'request': "GET /api/users/profile User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        'expected': 'safe',
+        'attack_type': 'benign'
+    },
+    {
+        'request': "POST /search data=query=legitimate+search+term",
+        'expected': 'safe',
+        'attack_type': 'benign'
     }
 ]
+
+# Replace PatternBasedWAFDetector with ProfessionalWAFDetector
+PatternBasedWAFDetector = ProfessionalWAFDetector  # For backward compatibility
