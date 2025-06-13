@@ -388,7 +388,7 @@ screen -X -S nginx-waf quit
 
 ## 📝 License
 
-Commercial use allowed under SSPL license. We welcome you use and update it as per your requriements
+Commercial use allowed under Apache 2.0 license. We welcome you use and update it as per your requriements
 ## 🤝 Contributing
 
 Currently, this project is maintained by our internal development team.For questions or support, please contact the development team.
