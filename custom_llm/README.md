@@ -162,4 +162,7 @@ Would you like to run the dynamic quantizer? (downloads models)
 Enter 'y' to run quantizer or any other key to skip: y
 
 
-U can download the quantizer with y
+------------------
+-------------------
+
+zero_day_runner.py and zero_day_waf.py use it as LLM and not pattern matcher
