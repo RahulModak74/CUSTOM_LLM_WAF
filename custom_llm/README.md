@@ -53,9 +53,15 @@ Found 3 malicious sessions - security analysis complete
 If you want to use the quantized_llm in dynamic_quant.py then
 
 1. Convert the session csv in the required format by
+
+
    python3 csv_converter.py sample_session.csv improved_sample.csv
 
-2. Then run
+   
+
+3. Then run
+
+
    python3 waf_runner.py improved_sample.csv 
 ================================================================================
 WAF ATTACK DETECTION RUNNER
