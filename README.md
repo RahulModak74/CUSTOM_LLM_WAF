@@ -1,5 +1,11 @@
 # Session Intelligence + Custom LLM python WAF - Installation Guide (Apache 2.0)
 
+Can be used as ADD ON to your existing WAF .. Just use our session intelligence and AI custom LLM.
+
+
+You can use any LLM (Qwen tested) , pl get in touch for  RL trained  custom LLM to your needs/ implementation consutling
+
+
 A Python-based Web Application Firewall (WAF) that integrates with Nginx using `auth_request` module to provide real-time threat detection and blocking.
 
 ## 🏗️ Architecture Overview
