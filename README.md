@@ -3,6 +3,9 @@
 🏆 Global-first Open Source: First Python-based WAF with Custom RL-LM Session Intelligence, Apache 2.0 Licensed
 
 
+Redefine Web Cybersecurity as AI first problem rather than tech problem!
+
+
 
 Can be used as ADD ON to your existing WAF by following below instructions.(Just use our session intelligence and AI custom LLM.)
 
