@@ -1,6 +1,10 @@
 # Session Intelligence + Custom LLM python WAF - Installation Guide (Apache 2.0)
 
-Can be used as ADD ON to your existing WAF .. Just use our session intelligence and AI custom LLM.
+🏆 Global-first Open Source: First Python-based WAF with Custom RL-LM Session Intelligence, Apache 2.0 Licensed
+
+
+
+Can be used as ADD ON to your existing WAF by following below instructions.(Just use our session intelligence and AI custom LLM.)
 
 
 You can use any LLM (Qwen tested) , pl get in touch for  RL trained  custom LLM to your needs/ implementation consutling
