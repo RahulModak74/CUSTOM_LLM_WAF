@@ -1,17 +1,4 @@
-# Session Intelligence + Custom LLM python WAF - Installation Guide (Apache 2.0)
-
-🏆 Global-first Open Source: First Python-based WAF with Custom RL-LM Session Intelligence, Apache 2.0 Licensed
-
-
-Redefine Web Cybersecurity as AI first problem rather than tech problem!
-
-
-
-Can be used as ADD ON to your existing WAF by following below instructions.(Just use our session intelligence and AI custom LLM.)
-
-
-You can use any LLM (Qwen tested) , pl get in touch for  RL trained  custom LLM to your needs/ implementation consutling
-
+# Nginx Security WAF - Installation Guide
 
 A Python-based Web Application Firewall (WAF) that integrates with Nginx using `auth_request` module to provide real-time threat detection and blocking.
 
@@ -141,12 +128,22 @@ curl -H "X-Original-URI: /" http://localhost:8080/auth
 
 ## 🌐 Client Machine Setup (Nginx + Application)
 
-### Step 1: Existing Nginx(ASSUMES YOU HAVE A WORKING WEB APPLICAION THAT NEEDS PROTECTION AND USES NGINX)
+### Step 1: Install Nginx
+```bash
+# Update system
+sudo apt update && sudo apt upgrade -y
 
+# Install Nginx
+sudo apt install nginx -y
+
+# Enable Nginx
+sudo systemctl enable nginx
+sudo systemctl start nginx
+```
 
 ### Step 2: Configure Nginx with WAF Integration
 
-**Important:** We'll configure the existing nginx  `config` file (which we have called nodeApp) instead of creating a new one.
+**Important:** We'll configure the existing `nodeApp` file instead of creating a new one.
 
 Edit the existing Nginx configuration:
 ```bash
@@ -158,15 +155,17 @@ Your configuration should look like this (replace `YOUR_WAF_SERVER_IP` with your
 # Point "security_auth" at your remote Python WAF
 upstream security_auth {
     server YOUR_WAF_SERVER_IP:8080 max_fails=3 fail_timeout=30s;
+    # Add backup options if available
+    # server YOUR_WAF_SERVER_IP:8001 backup;
 }
 
 server {
     server_name your-domain.com;
-    
+
     # Add more detailed logging for debugging
     access_log /var/log/nginx/waf_access.log;
     error_log /var/log/nginx/waf_error.log debug;
-    
+
     # Internal auth endpoint, forwarded to remote WAF
     location = /auth {
         internal;
@@ -180,39 +179,91 @@ server {
         proxy_set_header      X-Original-Referer      $http_referer;
         proxy_set_header      X-Original-Cookie       $http_cookie;
         proxy_set_header      X-Original-Host         $host;
+        proxy_set_header      X-Original-Accept-Language $http_accept_language;
+        proxy_set_header      X-Original-Accept-Encoding $http_accept_encoding;
+
+        # Increased timeouts for better reliability
         proxy_connect_timeout 5s;
         proxy_read_timeout    5s;
+        proxy_send_timeout    5s;
+
+        # Handle upstream errors better
+        proxy_next_upstream error timeout http_500 http_502 http_503 http_504;
     }
-    
-    # Main application (protected by WAF)
+
+    # Temporary bypass location for testing (remove after fixing)
+    location /test-bypass {
+        proxy_pass              http://localhost:8000;
+        proxy_http_version      1.1;
+        proxy_set_header        Upgrade          $http_upgrade;
+        proxy_set_header        Connection       "upgrade";
+        proxy_set_header        Host             $host;
+        proxy_cache_bypass      $http_upgrade;
+    }
+
+    # All main traffic is authenticated before proxying
     location / {
+        # Error handling for auth failures
+        error_page 401 = @auth_error;
+        error_page 403 = @auth_error;
+        error_page 500 = @auth_error;
+        error_page 502 = @auth_error;
+        error_page 503 = @auth_error;
+        error_page 504 = @auth_error;
+
         auth_request            /auth;
         auth_request_set        $session_id   $upstream_http_x_session_id;
         auth_request_set        $threat_level $upstream_http_x_threat_level;
-        
-        # Your application backend
-        proxy_pass              http://localhost:8000;  # Change to your app port
+        auth_request_set        $auth_status  $upstream_status;
+
+        proxy_set_header        X-Session-ID   $session_id;
+        proxy_set_header        X-Threat-Level $threat_level;
+        proxy_set_header        X-Auth-Status  $auth_status;
+
+        proxy_pass              http://localhost:8000;
+        proxy_http_version      1.1;
+        proxy_set_header        Upgrade          $http_upgrade;
+        proxy_set_header        Connection       "upgrade";
         proxy_set_header        Host             $host;
-        proxy_set_header        X-Real-IP        $remote_addr;
-        proxy_set_header        X-Session-ID     $session_id;
-        proxy_set_header        X-Threat-Level   $threat_level;
-        
-        # Error handling for auth failures
-        error_page 401 403 500 502 503 504 = @auth_error;
+        proxy_cache_bypass      $http_upgrade;
+
+        # CORS Headers
+        add_header 'Access-Control-Allow-Origin'  '*'     always;
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS' always;
+        add_header 'Access-Control-Allow-Headers' 'Content-Type, Authorization' always;
     }
-    
+
     # Error handling location
     location @auth_error {
+        # Log the auth error
+        access_log /var/log/nginx/auth_errors.log;
+
+        # Option 1: Return error page
         return 503 "Authentication service temporarily unavailable";
+
+        # Option 2: Bypass authentication temporarily (uncomment if needed)
+        # proxy_pass http://localhost:8000;
     }
-    
-    # Health check (bypasses auth)
+
+    # Health check endpoint (bypasses auth)
     location /health {
         proxy_pass http://localhost:8000/health;
     }
-    
+
+    listen 443 ssl;  # managed by Certbot
+    ssl_certificate     /etc/letsencrypt/live/your-domain.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/your-domain.com/privkey.pem;
+    include             /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam         /etc/letsencrypt/ssl-dhparams.pem;
+}
+
+server {
+    if ($host = your-domain.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+    server_name your-domain.com;
     listen 80;
-    # Add SSL configuration if needed
+    return 404; # managed by Certbot
 }
 ```
 
@@ -302,9 +353,8 @@ The WAF includes built-in rules for:
 ### Session Data Export
 ```bash
 # Export session data to CSV
-sqlite3 -header -csv sessions.db "SELECT * FROM sessions;" > sample_session.csv
+sqlite3 -header -csv sessions.db "SELECT * FROM sessions;" > sessions.csv
 ```
-After exporting the file (hardcoded sample_session.csv), you can directly call quick_session_scan.py (from custom_llm folder in this repo) to get LLM analysis of the results
 
 ---
 
@@ -401,7 +451,8 @@ screen -X -S nginx-waf quit
 
 ## 📝 License
 
-Commercial use allowed under Apache 2.0 license. We welcome you use and update it as per your requriements
+This project is licensed under Fair Use principles for educational and research purposes. Commercial use requires explicit permission from the development team.
+
 ## 🤝 Contributing
 
-Currently, this project is maintained by our internal development team.For questions or support, please contact the development team.
+Currently, this project is maintained by our internal development team.  For questions or support, please contact the development team.
