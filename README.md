@@ -1,4 +1,17 @@
-# Nginx Security WAF - Installation Guide
+# Session Intelligence + Custom LLM python WAF - Installation Guide (Apache 2.0)
+
+🏆 Global-first Open Source: First Python-based WAF with Custom RL-LM Session Intelligence, Apache 2.0 Licensed
+
+
+Redefine Web Cybersecurity as AI first problem rather than tech problem!
+
+
+
+Can be used as ADD ON to your existing WAF by following below instructions.(Just use our session intelligence and AI custom LLM.)
+
+
+You can use any LLM (Qwen tested) , pl get in touch for  RL trained  custom LLM to your needs/ implementation consutling
+
 
 A Python-based Web Application Firewall (WAF) that integrates with Nginx using `auth_request` module to provide real-time threat detection and blocking.
 
@@ -128,22 +141,12 @@ curl -H "X-Original-URI: /" http://localhost:8080/auth
 
 ## 🌐 Client Machine Setup (Nginx + Application)
 
-### Step 1: Install Nginx
-```bash
-# Update system
-sudo apt update && sudo apt upgrade -y
+### Step 1: Existing Nginx(ASSUMES YOU HAVE A WORKING WEB APPLICAION THAT NEEDS PROTECTION AND USES NGINX)
 
-# Install Nginx
-sudo apt install nginx -y
-
-# Enable Nginx
-sudo systemctl enable nginx
-sudo systemctl start nginx
-```
 
 ### Step 2: Configure Nginx with WAF Integration
 
-**Important:** We'll configure the existing `nodeApp` file instead of creating a new one.
+**Important:** We'll configure the existing nginx  `config` file (which we have called nodeApp) instead of creating a new one.
 
 Edit the existing Nginx configuration:
 ```bash
@@ -353,8 +356,9 @@ The WAF includes built-in rules for:
 ### Session Data Export
 ```bash
 # Export session data to CSV
-sqlite3 -header -csv sessions.db "SELECT * FROM sessions;" > sessions.csv
+sqlite3 -header -csv sessions.db "SELECT * FROM sessions;" > sample_session.csv
 ```
+After exporting the file (hardcoded sample_session.csv), you can directly call quick_session_scan.py (from custom_llm folder in this repo) to get LLM analysis of the results
 
 ---
 
@@ -451,8 +455,7 @@ screen -X -S nginx-waf quit
 
 ## 📝 License
 
-This project is licensed under Fair Use principles for educational and research purposes. Commercial use requires explicit permission from the development team.
-
+Commercial use allowed under Apache 2.0 license. We welcome you use and update it as per your requriements
 ## 🤝 Contributing
 
-Currently, this project is maintained by our internal development team.  For questions or support, please contact the development team.
+Currently, this project is maintained by our internal development team.For questions or support, please contact the development team.
