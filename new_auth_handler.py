@@ -1,6 +1,6 @@
 """
 Updated Auth Handler module - Main authentication logic with enhanced security
-Replace your existing auth_handler.py with this version This handles CSRF SSRF http request smuggling etc
+Replace your existing auth_handler.py with this version
 """
 
 import time
@@ -285,4 +285,195 @@ class AuthHandler:
         
         return auth_response
     
-    async def _check
+    async def _check_csrf_protection(self, req: AuthRequest, session_id: str):
+        """Check CSRF protection for request"""
+        # Parse form data from request body
+        form_data = self._parse_form_data(req.request_body)
+        
+        # Build headers dict for CSRF validation
+        headers = {
+            'Origin': self._extract_origin_from_referer(req.referer),
+            'Host': req.host,
+            'Cookie': req.cookie,
+            'Referer': req.referer,
+            'X-CSRF-Token': '',  # Will be extracted if present in actual headers
+        }
+        
+        # Check for CSRF token in cookie
+        if req.cookie:
+            import re
+            csrf_match = re.search(r'csrf_token=([^;]+)', req.cookie)
+            if csrf_match:
+                headers['X-CSRF-Token'] = csrf_match.group(1)
+        
+        return self.csrf_protection.validate_request(
+            method=req.method,
+            headers=headers,
+            form_data=form_data,
+            session_id=session_id
+        )
+    
+    def _extract_origin_from_referer(self, referer: str) -> str:
+        """Extract origin from referer header"""
+        if not referer:
+            return ""
+        
+        try:
+            import urllib.parse
+            parsed = urllib.parse.urlparse(referer)
+            return f"{parsed.scheme}://{parsed.netloc}"
+        except:
+            return ""
+    
+    def _build_raw_headers(self, req: AuthRequest) -> str:
+        """Build raw headers string for smuggling detection"""
+        headers = []
+        
+        if req.host:
+            headers.append(f"Host: {req.host}")
+        if req.user_agent:
+            headers.append(f"User-Agent: {req.user_agent}")
+        if req.referer:
+            headers.append(f"Referer: {req.referer}")
+        if req.cookie:
+            headers.append(f"Cookie: {req.cookie}")
+        if req.accept_lang:
+            headers.append(f"Accept-Language: {req.accept_lang}")
+        if req.accept_enc:
+            headers.append(f"Accept-Encoding: {req.accept_enc}")
+        
+        # Add Content-Length if we have request body
+        if req.request_body:
+            content_length = len(req.request_body.encode('utf-8'))
+            headers.append(f"Content-Length: {content_length}")
+        
+        return '\n'.join(headers)
+    
+    def _parse_form_data(self, request_body: str) -> dict:
+        """Parse form data from request body"""
+        form_data = {}
+        if not request_body:
+            return form_data
+        
+        try:
+            # Handle URL-encoded form data
+            parsed = urllib.parse.parse_qs(request_body)
+            for key, values in parsed.items():
+                form_data[key] = values[0] if values else ''
+        except Exception as e:
+            if self.server.config.debug:
+                self.logger.warning(f"Failed to parse form data: {e}")
+        
+        return form_data
+    
+    async def _run_waf(self, req: AuthRequest) -> WAFResult:
+        """Run WAF analysis - EXISTING METHOD WITH ENHANCEMENTS"""
+        # Create WAF context
+        ctx = WAFContext(
+            method=req.method,
+            uri=req.uri,
+            client_ip=req.client_ip,
+            user_agent=req.user_agent,
+            referer=req.referer,
+            cookie=req.cookie,
+            host=req.host,
+            accept_language=req.accept_lang,
+            accept_encoding=req.accept_enc,
+            request_body=req.request_body
+        )
+        
+        # Extract variables for WAF rules
+        self.server.waf_engine.extract_variables(ctx)
+        
+        # Run WAF evaluation in phases
+        from security_modules.rule import PhaseRequestHeaders, PhaseRequestBody
+        blocked1 = self.server.waf_engine.evaluate_rules(ctx, PhaseRequestHeaders)
+        blocked2 = self.server.waf_engine.evaluate_rules(ctx, PhaseRequestBody)
+        
+        blocked = blocked1 or blocked2
+        message = "WAF analysis complete"
+        
+        if blocked:
+            message = "; ".join(ctx.log_messages) if ctx.log_messages else "WAF rules triggered"
+        
+        # Enhanced logging for different modes
+        if self.server.config.debug and blocked:
+            self.logger.warning(
+                f"🛡️  [{self.mode.upper()}] WAF Details - IP: {req.client_ip}, "
+                f"URI: {req.uri}, UA: {req.user_agent}, Score: {ctx.anomaly_score}"
+            )
+        
+        return WAFResult(
+            allow=not blocked,
+            message=message,
+            score=ctx.anomaly_score
+        )
+    
+    async def _run_session_check(self, req: AuthRequest) -> SessionResult:
+        """Run session analysis - EXISTING METHOD"""
+        # Extract session ID from cookies
+        session_id = ""
+        if req.cookie:
+            cookies = req.cookie.split(";")
+            for cookie in cookies:
+                cookie = cookie.strip()
+                if cookie.startswith("session_id="):
+                    session_id = cookie[11:]  # Remove "session_id=" prefix
+                    break
+        
+        if not session_id:
+            # Create new session with client fingerprint
+            from security_modules.fingerprint_generator import ClientFingerprint
+            fingerprint = ClientFingerprint(
+                ip_address=req.client_ip,
+                user_agent=req.user_agent,
+                accept_language=req.accept_lang,
+                accept_encoding=req.accept_enc,
+                x_forwarded_for=req.client_ip,
+                referer=req.referer
+            )
+            
+            session_id = await self.server.session_engine.create_session(fingerprint)
+            
+            if self.server.config.debug:
+                self.logger.info(
+                    f"🆕 [{self.mode.upper()}] New session created: {session_id} for IP: {req.client_ip}"
+                )
+            
+            return SessionResult(
+                allow=True,
+                message="New session created",
+                session_id=session_id
+            )
+        
+        # Process existing session
+        allowed, message = await self.server.session_engine.process_request(
+            session_id, req.uri, req.user_agent, req.client_ip
+        )
+        
+        if self.server.config.debug:
+            status = "ALLOWED" if allowed else "BLOCKED"
+            self.logger.info(
+                f"🔄 [{self.mode.upper()}] Session {status}: {req.client_ip} "
+                f"- {message} (Session: {session_id})"
+            )
+        
+        return SessionResult(
+            allow=allowed,
+            message=message,
+            session_id=session_id
+        )
+    
+    def get_security_stats(self) -> dict:
+        """Get security statistics"""
+        return {
+            **self.security_stats,
+            "detection_modules": {
+                "waf": "active",
+                "sessions": "active", 
+                "ssrf": "active",
+                "csrf": "active",
+                "request_smuggling": "active",
+                "security_headers": "active"
+            }
+        }
