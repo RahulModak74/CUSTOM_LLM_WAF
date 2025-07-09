@@ -8,13 +8,19 @@ from pyro.optim import Adam
 import asyncio
 from collections import deque
 import numpy as np
+import time
+import logging
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 class OptimizedEDRModel:
     """Optimized HMM for real-time EDR detection"""
     
     def __init__(self, config, device='cuda'):
         self.config = config
-        self.device = device
+        self.device = device if torch.cuda.is_available() else 'cpu'
         self.N_state = 3  # [normal, suspicious, malicious]
         self.window_size = 100  # Sliding window
         self.batch_size = 64  # Process multiple endpoints
@@ -91,11 +97,15 @@ class OptimizedEDRModel:
         
         return state, next_state_probs
     
-    async def process_endpoint_stream(self, endpoint_id, observation_stream):
+    async def process_endpoint_stream(self, endpoint_id, observation_stream, max_events=100):
         """Async processing for real-time streams"""
+        event_count = 0
         async for observation in observation_stream:
+            if event_count >= max_events:
+                break
+                
             # Update sliding window
-            window_obs = self.sliding_window_update(endpoint_id, observation)
+            window_obs = self.sliding_window_update(endpoint_id, observation['data'])
             
             if window_obs is not None:
                 # Fast inference on recent window
@@ -105,13 +115,19 @@ class OptimizedEDRModel:
                 # Generate alert if malicious probability > threshold
                 malicious_prob = probs[0, 2].item()
                 if malicious_prob > 0.7:
-                    yield {
+                    alert = {
                         'endpoint_id': endpoint_id,
                         'timestamp': observation['timestamp'],
                         'threat_level': 'HIGH',
                         'malicious_probability': malicious_prob,
                         'final_state': final_state.item()
                     }
+                    logger.warning(f"THREAT DETECTED: {alert}")
+                    yield alert
+                elif malicious_prob > 0.4:
+                    logger.info(f"Suspicious activity on {endpoint_id}: {malicious_prob:.3f}")
+            
+            event_count += 1
     
     def batch_inference(self, batch_observations):
         """GPU-optimized batch processing"""
@@ -131,9 +147,42 @@ class OptimizedEDRModel:
         return loss
 
 
-# Usage example
-async def main():
-    """Example usage for real-time EDR"""
+# Test functions
+async def simulate_endpoint_stream(endpoint_id, duration=5.0):
+    """Simulate endpoint telemetry stream"""
+    start_time = time.time()
+    event_count = 0
+    
+    while time.time() - start_time < duration:
+        # Simulate different types of activity
+        if endpoint_id == 'host1':
+            # Normal activity
+            observation_data = np.random.exponential(0.5, 3)
+        elif endpoint_id == 'host2':
+            # Suspicious activity
+            observation_data = np.random.exponential(2.0, 3)
+        else:
+            # Potentially malicious activity
+            observation_data = np.random.exponential(5.0, 3)
+        
+        # Normalize file activity to [0, 1]
+        observation_data[2] = min(observation_data[2] / 10.0, 1.0)
+        
+        observation = {
+            'timestamp': time.time(),
+            'data': observation_data
+        }
+        
+        yield observation
+        event_count += 1
+        await asyncio.sleep(0.01)  # 10ms intervals
+    
+    logger.info(f"Endpoint {endpoint_id} generated {event_count} events")
+
+
+def test_batch_processing():
+    """Test batch processing functionality"""
+    logger.info("Testing batch processing...")
     
     config = {
         'device': 'cuda' if torch.cuda.is_available() else 'cpu',
@@ -142,27 +191,117 @@ async def main():
     
     edr_model = OptimizedEDRModel(config)
     
-    # Simulate real-time processing
-    async def simulate_endpoint_stream(endpoint_id):
-        """Simulate endpoint telemetry stream"""
-        while True:
-            # Simulate observation: [process_rate, network_entropy, file_activity]
-            observation = {
-                'timestamp': torch.tensor(time.time()),
-                'data': np.random.exponential(1.0, 3)  # Random observation
-            }
-            yield observation
-            await asyncio.sleep(0.001)  # 1ms intervals
+    # Create test batch data
+    batch_size = 32
+    seq_len = 50
+    obs_dim = 3
     
-    # Process multiple endpoints concurrently
+    # Generate random observations
+    batch_observations = torch.rand(batch_size, seq_len, obs_dim, device=edr_model.device)
+    
+    # Time the batch inference
+    start_time = time.time()
+    states, probs = edr_model.batch_inference(batch_observations)
+    end_time = time.time()
+    
+    logger.info(f"Batch processing completed in {end_time - start_time:.4f} seconds")
+    logger.info(f"Final states: {states}")
+    logger.info(f"Malicious probabilities: {probs[:, 2]}")
+    
+    return edr_model
+
+
+async def test_real_time_processing():
+    """Test real-time stream processing"""
+    logger.info("Testing real-time processing...")
+    
+    config = {
+        'device': 'cuda' if torch.cuda.is_available() else 'cpu',
+        'endpoints': ['host1', 'host2', 'host3']
+    }
+    
+    edr_model = OptimizedEDRModel(config)
+    
+    # Create tasks for each endpoint
     tasks = []
     for endpoint_id in config['endpoints']:
-        stream = simulate_endpoint_stream(endpoint_id)
-        task = edr_model.process_endpoint_stream(endpoint_id, stream)
-        tasks.append(task)
+        stream = simulate_endpoint_stream(endpoint_id, duration=3.0)
+        task = edr_model.process_endpoint_stream(endpoint_id, stream, max_events=200)
+        tasks.append(collect_alerts(task, endpoint_id))
     
     # Run all streams concurrently
-    await asyncio.gather(*tasks)
+    results = await asyncio.gather(*tasks)
+    
+    # Print results
+    for endpoint_id, alerts in zip(config['endpoints'], results):
+        logger.info(f"Endpoint {endpoint_id} generated {len(alerts)} alerts")
+    
+    return edr_model
+
+
+async def collect_alerts(alert_stream, endpoint_id):
+    """Collect alerts from an async stream"""
+    alerts = []
+    async for alert in alert_stream:
+        alerts.append(alert)
+    return alerts
+
+
+def benchmark_performance():
+    """Benchmark model performance"""
+    logger.info("Benchmarking performance...")
+    
+    config = {
+        'device': 'cuda' if torch.cuda.is_available() else 'cpu',
+        'endpoints': ['host1', 'host2', 'host3']
+    }
+    
+    edr_model = OptimizedEDRModel(config)
+    
+    # Test different batch sizes
+    batch_sizes = [1, 8, 32, 64]
+    seq_len = 100
+    obs_dim = 3
+    
+    for batch_size in batch_sizes:
+        batch_observations = torch.rand(batch_size, seq_len, obs_dim, device=edr_model.device)
+        
+        # Warm up
+        for _ in range(10):
+            edr_model.batch_inference(batch_observations)
+        
+        # Benchmark
+        start_time = time.time()
+        for _ in range(100):
+            edr_model.batch_inference(batch_observations)
+        end_time = time.time()
+        
+        avg_time = (end_time - start_time) / 100
+        events_per_second = (batch_size * seq_len) / avg_time
+        
+        logger.info(f"Batch size {batch_size}: {avg_time:.6f}s per batch, {events_per_second:.0f} events/sec")
+
+
+async def main():
+    """Main test function"""
+    logger.info("Starting EDR Model Tests...")
+    logger.info(f"Using device: {torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU'}")
+    
+    # Test 1: Batch processing
+    edr_model = test_batch_processing()
+    
+    # Test 2: Real-time processing
+    await test_real_time_processing()
+    
+    # Test 3: Performance benchmark
+    benchmark_performance()
+    
+    logger.info("All tests completed!")
+
+
+if __name__ == "__main__":
+    # Run the main function
+    asyncio.run(main())
 
 # Performance optimizations summary:
 """
