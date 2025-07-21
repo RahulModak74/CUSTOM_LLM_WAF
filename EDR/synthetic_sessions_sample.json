@@ -1,0 +1,5481 @@
+{
+  "jane_johnson_dev_knrn45": {
+    "session_id": "jane_johnson_dev_knrn45",
+    "user_name": "jane.johnson",
+    "device_name": "dev-knrn45",
+    "alerts": [
+      {
+        "timestamp": "2025-07-18T00:00:04.070565",
+        "event_type": "Network",
+        "device_name": "dev-knrn45",
+        "user_name": "jane.johnson",
+        "details": {
+          "remote_ip": "29.93.118.155",
+          "remote_port": 53,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_johnson_dev-knrn45",
+          "alert_index": 0
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:01:44.988836",
+        "event_type": "File",
+        "device_name": "dev-knrn45",
+        "user_name": "jane.johnson",
+        "details": {
+          "file_name": "document_590.log",
+          "action": "FileDeleted",
+          "hash": "857ff9934fac56d093cd4d7e6a4c80695aba2f80e2e955a350cdfac8f43dca7e"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_johnson_dev-knrn45",
+          "alert_index": 5
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:02:45.923181",
+        "event_type": "Network",
+        "device_name": "dev-knrn45",
+        "user_name": "jane.johnson",
+        "details": {
+          "remote_ip": "192.168.3.253",
+          "remote_port": 22,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_johnson_dev-knrn45",
+          "alert_index": 1
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:03:15.643784",
+        "event_type": "File",
+        "device_name": "dev-knrn45",
+        "user_name": "jane.johnson",
+        "details": {
+          "file_name": "document_191.pdf",
+          "action": "FileDeleted",
+          "hash": "174d112a8fb375d53d6b90e81aad20bc710d9c3f944c9b6353a5aa376272c8d7"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_johnson_dev-knrn45",
+          "alert_index": 4
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:04:10.335948",
+        "event_type": "File",
+        "device_name": "dev-knrn45",
+        "user_name": "jane.johnson",
+        "details": {
+          "file_name": "document_510.step",
+          "action": "FileCreated",
+          "hash": "0955a0044366b03d4998f7f931eb7cba1077ba1b9b2a7a7415e2b902848e2e73"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_johnson_dev-knrn45",
+          "alert_index": 3
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:06:45.739454",
+        "event_type": "Process",
+        "device_name": "dev-knrn45",
+        "user_name": "jane.johnson",
+        "details": {
+          "file_name": "autocad.exe",
+          "command_line": "scada.exe -version",
+          "process_id": 8096
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_johnson_dev-knrn45",
+          "alert_index": 2
+        }
+      }
+    ],
+    "first_alert": "2025-07-18T00:00:04.070565",
+    "last_alert": "2025-07-18T00:06:45.739454",
+    "event_types": [
+      "Process",
+      "Network",
+      "File"
+    ],
+    "attack_indicators": [],
+    "alert_count": 6,
+    "is_attack_session": false,
+    "avg_attack_intensity": 0,
+    "risk_score": 65,
+    "is_suspicious": true
+  },
+  "sarah_johnson_test_2vraov": {
+    "session_id": "sarah_johnson_test_2vraov",
+    "user_name": "sarah.johnson",
+    "device_name": "test-2vraov",
+    "alerts": [
+      {
+        "timestamp": "2025-07-18T00:00:39.070565",
+        "event_type": "Network",
+        "device_name": "test-2vraov",
+        "user_name": "sarah.johnson",
+        "details": {
+          "remote_ip": "93.81.129.53",
+          "remote_port": 443,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_johnson_test-2vraov",
+          "alert_index": 0
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:00:39.070565",
+        "event_type": "Network",
+        "device_name": "test-2vraov",
+        "user_name": "sarah.johnson",
+        "details": {
+          "remote_ip": "165.217.96.127",
+          "remote_port": 53,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_johnson_test-2vraov",
+          "alert_index": 1
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:05:20.091116",
+        "event_type": "File",
+        "device_name": "test-2vraov",
+        "user_name": "sarah.johnson",
+        "details": {
+          "file_name": "document_545.pdf",
+          "action": "FileCreated",
+          "hash": "bf62be49f9aa229257d73f2fb7b8f093aaa7dcd23f445023d735d769c3285b02"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_johnson_test-2vraov",
+          "alert_index": 2
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:06:45.362366",
+        "event_type": "File",
+        "device_name": "test-2vraov",
+        "user_name": "sarah.johnson",
+        "details": {
+          "file_name": "document_595.log",
+          "action": "FileAccessed",
+          "hash": "f851a6cd77be9e6ec1209140cfa123d2884e6ac614a927221b0eb8b5d6b2faaf"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_johnson_test-2vraov",
+          "alert_index": 4
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:10:22.478879",
+        "event_type": "Network",
+        "device_name": "test-2vraov",
+        "user_name": "sarah.johnson",
+        "details": {
+          "remote_ip": "192.168.2.62",
+          "remote_port": 22,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_johnson_test-2vraov",
+          "alert_index": 3
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:10:56.065833",
+        "event_type": "Process",
+        "device_name": "test-2vraov",
+        "user_name": "sarah.johnson",
+        "details": {
+          "file_name": "solidworks.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 9072
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_johnson_test-2vraov",
+          "alert_index": 6
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:12:07.724109",
+        "event_type": "File",
+        "device_name": "test-2vraov",
+        "user_name": "sarah.johnson",
+        "details": {
+          "file_name": "document_453.pdf",
+          "action": "FileDeleted",
+          "hash": "69b3bcf9b016b3f70da205d9cea560e8be48c3567c54cb32ba4dda6673f66a03"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_johnson_test-2vraov",
+          "alert_index": 5
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:12:56.029801",
+        "event_type": "Process",
+        "device_name": "test-2vraov",
+        "user_name": "sarah.johnson",
+        "details": {
+          "file_name": "scada.exe",
+          "command_line": "npm.exe install package_21",
+          "process_id": 5163
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_johnson_test-2vraov",
+          "alert_index": 7
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:20:58.481185",
+        "event_type": "File",
+        "device_name": "test-2vraov",
+        "user_name": "sarah.johnson",
+        "details": {
+          "file_name": "document_20.step",
+          "action": "FileModified",
+          "hash": "775c2501c1ea47e7daf341a0774500322f0c6740d7c4e6d1577495679dfe71dc"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_johnson_test-2vraov",
+          "alert_index": 8
+        }
+      }
+    ],
+    "first_alert": "2025-07-18T00:00:39.070565",
+    "last_alert": "2025-07-18T00:20:58.481185",
+    "event_types": [
+      "Process",
+      "Network",
+      "File"
+    ],
+    "attack_indicators": [],
+    "alert_count": 9,
+    "is_attack_session": false,
+    "avg_attack_intensity": 0,
+    "risk_score": 75,
+    "is_suspicious": true
+  },
+  "jane_brown_test_boq8x9": {
+    "session_id": "jane_brown_test_boq8x9",
+    "user_name": "jane.brown",
+    "device_name": "test-boq8x9",
+    "alerts": [
+      {
+        "timestamp": "2025-07-18T00:06:51.503577",
+        "event_type": "Network",
+        "device_name": "test-boq8x9",
+        "user_name": "jane.brown",
+        "details": {
+          "remote_ip": "197.228.117.132",
+          "remote_port": 22,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_brown_test-boq8x9",
+          "alert_index": 0
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:16:39.554163",
+        "event_type": "Network",
+        "device_name": "test-boq8x9",
+        "user_name": "jane.brown",
+        "details": {
+          "remote_ip": "218.20.142.82",
+          "remote_port": 22,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_brown_test-boq8x9",
+          "alert_index": 1
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:25:10.719091",
+        "event_type": "File",
+        "device_name": "test-boq8x9",
+        "user_name": "jane.brown",
+        "details": {
+          "file_name": "document_520.py",
+          "action": "FileDeleted",
+          "hash": "2a04fa3cca0061504faccb5b44de128d6841fe6e97e40aa08e0ddcd034e774f0"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_brown_test-boq8x9",
+          "alert_index": 2
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:31:26.257650",
+        "event_type": "Network",
+        "device_name": "test-boq8x9",
+        "user_name": "jane.brown",
+        "details": {
+          "remote_ip": "120.20.21.87",
+          "remote_port": 22,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_brown_test-boq8x9",
+          "alert_index": 3
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:36:56.489765",
+        "event_type": "File",
+        "device_name": "test-boq8x9",
+        "user_name": "jane.brown",
+        "details": {
+          "file_name": "document_587.yml",
+          "action": "FileCreated",
+          "hash": "c0ab57dba7b19c5986450abe15c856f7dc46b8f06472ad477cc97a7028a66add"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_brown_test-boq8x9",
+          "alert_index": 4
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:48:26.691943",
+        "event_type": "File",
+        "device_name": "test-boq8x9",
+        "user_name": "jane.brown",
+        "details": {
+          "file_name": "document_400.json",
+          "action": "FileCreated",
+          "hash": "aafe913488411e2ff87389b8eac09a34f363404a89b18154dbf6e7340da21339"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_brown_test-boq8x9",
+          "alert_index": 5
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:58:45.971383",
+        "event_type": "Process",
+        "device_name": "test-boq8x9",
+        "user_name": "jane.brown",
+        "details": {
+          "file_name": "python.exe",
+          "command_line": "docker.exe run -d app_6",
+          "process_id": 3902
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_brown_test-boq8x9",
+          "alert_index": 6
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:07:02.215677",
+        "event_type": "File",
+        "device_name": "test-boq8x9",
+        "user_name": "jane.brown",
+        "details": {
+          "file_name": "document_746.js",
+          "action": "FileCreated",
+          "hash": "66c944a865d8d8ef69084a3bf04489e294ada0911e98bb638636252a3895be24"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_brown_test-boq8x9",
+          "alert_index": 7
+        }
+      }
+    ],
+    "first_alert": "2025-07-18T00:06:51.503577",
+    "last_alert": "2025-07-18T01:07:02.215677",
+    "event_types": [
+      "Process",
+      "Network",
+      "File"
+    ],
+    "attack_indicators": [],
+    "alert_count": 8,
+    "is_attack_session": false,
+    "avg_attack_intensity": 0,
+    "risk_score": 75,
+    "is_suspicious": true
+  },
+  "sarah_brown_test_4xg023": {
+    "session_id": "sarah_brown_test_4xg023",
+    "user_name": "sarah.brown",
+    "device_name": "test-4xg023",
+    "alerts": [
+      {
+        "timestamp": "2025-07-18T00:10:48.070565",
+        "event_type": "Process",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "scada.exe",
+          "command_line": "python.exe script_48.py",
+          "process_id": 2349
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 0
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:15:40.491118",
+        "event_type": "File",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "document_827.pdf",
+          "action": "FileAccessed",
+          "hash": "b61eac8aca99adeecd499b49a1dc5b0a50e125487cab4e3ec3879dd404fc25bc"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 2
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:17:11.069259",
+        "event_type": "Network",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "remote_ip": "192.168.10.248",
+          "remote_port": 53,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 1
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:25:38.070565",
+        "event_type": "File",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "document_359.pdf",
+          "action": "FileCreated",
+          "hash": "bc7c88ab3ce57526a960257a93581b460bf86541614bd03437340368f7314137"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 1
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:25:52.961658",
+        "event_type": "Process",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "outlook.exe",
+          "command_line": "docker.exe run -d app_7",
+          "process_id": 2462
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 2
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:26:07.298684",
+        "event_type": "Process",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "outlook.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 9242
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 8
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:26:58.349164",
+        "event_type": "Network",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "remote_ip": "10.1.11.215",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 5
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:27:55.154735",
+        "event_type": "Network",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "remote_ip": "10.2.142.201",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 7
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:29:26.636411",
+        "event_type": "Network",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "remote_ip": "10.9.86.8",
+          "remote_port": 80,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 0
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:30:41.103342",
+        "event_type": "Process",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "docker.exe run -d app_1",
+          "process_id": 7665
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 10
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:30:41.250723",
+        "event_type": "File",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "document_160.xlsx",
+          "action": "FileCreated",
+          "hash": "754d4a7236fe4786dfe9032f6d2584cd05c450a7d0a23498dfc301aa2d854a0f"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 4
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:31:45.654198",
+        "event_type": "File",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "document_467.pdf",
+          "action": "FileDeleted",
+          "hash": "6ac02e9bf5c16224a14255af0dd0acd3c93c7021cb762edd0d2992046ff0df9a"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 6
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:31:57.755607",
+        "event_type": "File",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "document_393.xlsx",
+          "action": "FileModified",
+          "hash": "5d0934ed91c583ff47cab065cb43a4c7425827742d1b31107f50467f50454c45"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 3
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:33:07.215978",
+        "event_type": "File",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "document_164.pdf",
+          "action": "FileAccessed",
+          "hash": "a205aff0a7ce8fa2db8c794a6283d2e0d87c4bc4378ff02ab6bdfc72e8211cf7"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 15
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:33:46.550748",
+        "event_type": "Network",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "remote_ip": "10.4.90.254",
+          "remote_port": 22,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 19
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:33:56.372949",
+        "event_type": "File",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "document_760.docx",
+          "action": "FileAccessed",
+          "hash": "55b1c1c49c45f83eb359a6b2545042daddf0f7515c6e7b26d7450dbc44ada08d"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 18
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:34:21.065801",
+        "event_type": "Network",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "remote_ip": "10.7.199.159",
+          "remote_port": 443,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 11
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:34:57.671895",
+        "event_type": "File",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "document_200.msg",
+          "action": "FileModified",
+          "hash": "a2c093a0c8af7fea6685bf0e5efb1df4dfc091e74abe2e1090828a5032193868"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 9
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:35:13.757012",
+        "event_type": "File",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "document_563.pdf",
+          "action": "FileAccessed",
+          "hash": "79f738076ef01da1437d367c088bf06208f34ed70a64d43ae0bb5d92cf1059fe"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 20
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:35:18.557875",
+        "event_type": "Network",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "remote_ip": "10.8.206.135",
+          "remote_port": 80,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 14
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:35:30.592751",
+        "event_type": "Process",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "outlook.exe -version",
+          "process_id": 1104
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 16
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:35:37.687234",
+        "event_type": "File",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "document_276.xlsx",
+          "action": "FileModified",
+          "hash": "f48d1d07b4eba0c9e140d77374ca5f298468baa866121623171b33233df39e21"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 22
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:35:59.678135",
+        "event_type": "Process",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "npm.exe install package_30",
+          "process_id": 3789
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 17
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:36:15.305507",
+        "event_type": "Process",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "docker.exe run -d app_1",
+          "process_id": 6190
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 13
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:38:13.206609",
+        "event_type": "Process",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "outlook.exe",
+          "command_line": "docker.exe run -d app_18",
+          "process_id": 1694
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 12
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:43:48.781296",
+        "event_type": "Network",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "remote_ip": "10.6.11.255",
+          "remote_port": 443,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 21
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:44:48.039551",
+        "event_type": "Network",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "remote_ip": "10.9.114.191",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 24
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:44:49.191140",
+        "event_type": "Process",
+        "device_name": "test-4xg023",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "outlook.exe",
+          "command_line": "java.exe -version",
+          "process_id": 1079
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_test-4xg023",
+          "alert_index": 23
+        }
+      }
+    ],
+    "first_alert": "2025-07-18T00:10:48.070565",
+    "last_alert": "2025-07-18T07:44:49.191140",
+    "event_types": [
+      "Network",
+      "Process",
+      "File"
+    ],
+    "attack_indicators": [],
+    "alert_count": 28,
+    "is_attack_session": false,
+    "avg_attack_intensity": 0,
+    "risk_score": 100,
+    "is_suspicious": true
+  },
+  "john_williams_test_yecw7t": {
+    "session_id": "john_williams_test_yecw7t",
+    "user_name": "john.williams",
+    "device_name": "test-yecw7t",
+    "alerts": [
+      {
+        "timestamp": "2025-07-18T00:31:02.070565",
+        "event_type": "Network",
+        "device_name": "test-yecw7t",
+        "user_name": "john.williams",
+        "details": {
+          "remote_ip": "10.3.30.110",
+          "remote_port": 80,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "john_williams_test-yecw7t",
+          "alert_index": 0
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:36:00.458982",
+        "event_type": "Network",
+        "device_name": "test-yecw7t",
+        "user_name": "john.williams",
+        "details": {
+          "remote_ip": "10.10.176.48",
+          "remote_port": 80,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "john_williams_test-yecw7t",
+          "alert_index": 1
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:43:16.697313",
+        "event_type": "File",
+        "device_name": "test-yecw7t",
+        "user_name": "john.williams",
+        "details": {
+          "file_name": "document_455.pdf",
+          "action": "FileAccessed",
+          "hash": "35cef9835a3f1bceb8d7de0ef74fd2618cd3263816a7e0e0a3154c48be71ed5d"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "john_williams_test-yecw7t",
+          "alert_index": 2
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:49:09.617663",
+        "event_type": "Process",
+        "device_name": "test-yecw7t",
+        "user_name": "john.williams",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "python.exe script_87.py",
+          "process_id": 2856
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "john_williams_test-yecw7t",
+          "alert_index": 3
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:52:39.979628",
+        "event_type": "File",
+        "device_name": "test-yecw7t",
+        "user_name": "john.williams",
+        "details": {
+          "file_name": "document_571.xlsx",
+          "action": "FileAccessed",
+          "hash": "4b9c927cd99dcb5b689e33d144b8eb3c628e0dee4842db30c840a97653e594b6"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "john_williams_test-yecw7t",
+          "alert_index": 5
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:54:03.605471",
+        "event_type": "File",
+        "device_name": "test-yecw7t",
+        "user_name": "john.williams",
+        "details": {
+          "file_name": "document_344.pdf",
+          "action": "FileModified",
+          "hash": "52b4714a63dd8853c9711da7b215165207d9ba8fedfec6a339fce363670830e0"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "john_williams_test-yecw7t",
+          "alert_index": 4
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:59:19.522123",
+        "event_type": "File",
+        "device_name": "test-yecw7t",
+        "user_name": "john.williams",
+        "details": {
+          "file_name": "document_942.xlsx",
+          "action": "FileCreated",
+          "hash": "0b2fc5b2fc585446b91149695dd54e052cbb82ea85456e9e18aabf8ef449c877"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "john_williams_test-yecw7t",
+          "alert_index": 6
+        }
+      },
+      {
+        "timestamp": "2025-07-21T17:07:13.490074",
+        "event_type": "Process",
+        "device_name": "test-yecw7t",
+        "user_name": "john.williams",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "python.exe script_13.py",
+          "process_id": 8310
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "john_williams_test-yecw7t",
+          "alert_index": 0
+        }
+      },
+      {
+        "timestamp": "2025-07-21T17:15:17.333523",
+        "event_type": "File",
+        "device_name": "test-yecw7t",
+        "user_name": "john.williams",
+        "details": {
+          "file_name": "document_881.xlsx",
+          "action": "FileModified",
+          "hash": "7cae553662845c0e2082b81f1dbf3e0143db8169a98c5c4308148ced2d44f272"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "john_williams_test-yecw7t",
+          "alert_index": 1
+        }
+      },
+      {
+        "timestamp": "2025-07-21T17:19:20.785234",
+        "event_type": "Network",
+        "device_name": "test-yecw7t",
+        "user_name": "john.williams",
+        "details": {
+          "remote_ip": "10.9.13.186",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "john_williams_test-yecw7t",
+          "alert_index": 2
+        }
+      },
+      {
+        "timestamp": "2025-07-21T17:36:14.261959",
+        "event_type": "Process",
+        "device_name": "test-yecw7t",
+        "user_name": "john.williams",
+        "details": {
+          "file_name": "outlook.exe",
+          "command_line": "python.exe script_11.py",
+          "process_id": 6860
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "john_williams_test-yecw7t",
+          "alert_index": 3
+        }
+      },
+      {
+        "timestamp": "2025-07-21T17:40:47.806201",
+        "event_type": "Network",
+        "device_name": "test-yecw7t",
+        "user_name": "john.williams",
+        "details": {
+          "remote_ip": "10.9.90.91",
+          "remote_port": 80,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "john_williams_test-yecw7t",
+          "alert_index": 4
+        }
+      },
+      {
+        "timestamp": "2025-07-21T17:43:58.202157",
+        "event_type": "Network",
+        "device_name": "test-yecw7t",
+        "user_name": "john.williams",
+        "details": {
+          "remote_ip": "10.8.51.60",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "john_williams_test-yecw7t",
+          "alert_index": 5
+        }
+      },
+      {
+        "timestamp": "2025-07-21T18:00:28.732453",
+        "event_type": "Network",
+        "device_name": "test-yecw7t",
+        "user_name": "john.williams",
+        "details": {
+          "remote_ip": "10.4.252.196",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "john_williams_test-yecw7t",
+          "alert_index": 6
+        }
+      },
+      {
+        "timestamp": "2025-07-21T18:03:41.127412",
+        "event_type": "Network",
+        "device_name": "test-yecw7t",
+        "user_name": "john.williams",
+        "details": {
+          "remote_ip": "10.8.146.33",
+          "remote_port": 22,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "john_williams_test-yecw7t",
+          "alert_index": 7
+        }
+      }
+    ],
+    "first_alert": "2025-07-18T00:31:02.070565",
+    "last_alert": "2025-07-21T18:03:41.127412",
+    "event_types": [
+      "Process",
+      "Network",
+      "File"
+    ],
+    "attack_indicators": [],
+    "alert_count": 15,
+    "is_attack_session": false,
+    "avg_attack_intensity": 0,
+    "risk_score": 100,
+    "is_suspicious": true
+  },
+  "sarah_brown_dev_yml3nu": {
+    "session_id": "sarah_brown_dev_yml3nu",
+    "user_name": "sarah.brown",
+    "device_name": "dev-yml3nu",
+    "alerts": [
+      {
+        "timestamp": "2025-07-18T00:37:42.070565",
+        "event_type": "File",
+        "device_name": "dev-yml3nu",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "document_441.js",
+          "action": "FileCreated",
+          "hash": "52f2579e48d4a927d185bdfd5f34bee54a09162470f523050e1a309041c359f3"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_dev-yml3nu",
+          "alert_index": 0
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:37:42.070565",
+        "event_type": "Process",
+        "device_name": "dev-yml3nu",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "code.exe",
+          "command_line": "npm.exe install package_30",
+          "process_id": 6009
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_dev-yml3nu",
+          "alert_index": 1
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:40:11.952321",
+        "event_type": "Network",
+        "device_name": "dev-yml3nu",
+        "user_name": "sarah.brown",
+        "details": {
+          "remote_ip": "148.174.85.151",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_dev-yml3nu",
+          "alert_index": 2
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:45:11.217531",
+        "event_type": "File",
+        "device_name": "dev-yml3nu",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "document_507.js",
+          "action": "FileDeleted",
+          "hash": "5a6d47bb10b21eee1a93bbe30edd6142ad72a13368ceb2ee81d399204515e35b"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_dev-yml3nu",
+          "alert_index": 4
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:48:44.584465",
+        "event_type": "Process",
+        "device_name": "dev-yml3nu",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "code.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 4583
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_dev-yml3nu",
+          "alert_index": 3
+        }
+      },
+      {
+        "timestamp": "2025-07-18T00:54:43.048309",
+        "event_type": "Process",
+        "device_name": "dev-yml3nu",
+        "user_name": "sarah.brown",
+        "details": {
+          "file_name": "node.exe",
+          "command_line": "npm.exe install package_28",
+          "process_id": 8198
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "sarah_brown_dev-yml3nu",
+          "alert_index": 5
+        }
+      }
+    ],
+    "first_alert": "2025-07-18T00:37:42.070565",
+    "last_alert": "2025-07-18T00:54:43.048309",
+    "event_types": [
+      "Process",
+      "Network",
+      "File"
+    ],
+    "attack_indicators": [],
+    "alert_count": 6,
+    "is_attack_session": false,
+    "avg_attack_intensity": 0,
+    "risk_score": 40,
+    "is_suspicious": false
+  },
+  "jane_smith_user_aes57j": {
+    "session_id": "jane_smith_user_aes57j",
+    "user_name": "jane.smith",
+    "device_name": "user-aes57j",
+    "alerts": [
+      {
+        "timestamp": "2025-07-18T01:03:36.070565",
+        "event_type": "Process",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "python.exe script_39.py",
+          "process_id": 6515
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 3
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:03:55.429312",
+        "event_type": "Network",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "remote_ip": "10.1.153.71",
+          "remote_port": 443,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 4
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:05:40.423655",
+        "event_type": "Process",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "python.exe script_74.py",
+          "process_id": 4839
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 0
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:06:43.980742",
+        "event_type": "Network",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "remote_ip": "10.5.222.202",
+          "remote_port": 22,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 5
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:08:14.449227",
+        "event_type": "Process",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 3861
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 1
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:08:29.715148",
+        "event_type": "Network",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "remote_ip": "10.9.254.91",
+          "remote_port": 3389,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 2
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:08:33.266973",
+        "event_type": "Network",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "remote_ip": "10.5.215.19",
+          "remote_port": 53,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 6
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:11:41.802838",
+        "event_type": "File",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "file_name": "document_494.msg",
+          "action": "FileDeleted",
+          "hash": "a76ac558278695b851b49e25388dfb8bf6ce51d1243a4c05d58def032f939668"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 8
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:12:17.323377",
+        "event_type": "Network",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "remote_ip": "10.2.94.4",
+          "remote_port": 80,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 10
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:13:29.406897",
+        "event_type": "Network",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "remote_ip": "10.2.144.178",
+          "remote_port": 80,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 11
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:14:49.258211",
+        "event_type": "Network",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "remote_ip": "10.7.45.10",
+          "remote_port": 443,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 9
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:16:42.354830",
+        "event_type": "File",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "file_name": "document_634.pdf",
+          "action": "FileAccessed",
+          "hash": "8e9609a320bf8a750f0d54737a3ba24134c3178d8adf3c34a8ad2b39b5c2a6b1"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 7
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:18:24.416670",
+        "event_type": "Process",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "file_name": "outlook.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 5948
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 14
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:19:45.590417",
+        "event_type": "Process",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "python.exe script_2.py",
+          "process_id": 1956
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 12
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:19:46.235890",
+        "event_type": "Network",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "remote_ip": "10.3.130.180",
+          "remote_port": 22,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 15
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:22:34.942813",
+        "event_type": "Process",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 7244
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 13
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:23:41.728037",
+        "event_type": "Process",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 6294
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 17
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:25:34.842733",
+        "event_type": "Network",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "remote_ip": "10.8.12.88",
+          "remote_port": 443,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 16
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:27:10.284938",
+        "event_type": "File",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "file_name": "document_593.pdf",
+          "action": "FileModified",
+          "hash": "5b5eafeebd16a6c3b4eeea3ff431e136c55ada0338dc7e0350f00d914e901dce"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 21
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:27:18.400953",
+        "event_type": "File",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "file_name": "document_371.msg",
+          "action": "FileModified",
+          "hash": "aa67e13a212b73b248ae459ad20071d83d3384b62c9f455c8fa2da5b2028afdc"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 18
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:27:25.892415",
+        "event_type": "File",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "file_name": "document_434.docx",
+          "action": "FileDeleted",
+          "hash": "4b26bb3a6382796ded1ed9b8457176a72a38b735fbcaa2f1d5a9d09fc40303fd"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 22
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:27:54.885952",
+        "event_type": "Process",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "docker.exe run -d app_14",
+          "process_id": 9446
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 19
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:34:11.822780",
+        "event_type": "Network",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "remote_ip": "10.4.143.89",
+          "remote_port": 80,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 20
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:34:28.391974",
+        "event_type": "Process",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "excel.exe -version",
+          "process_id": 6559
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 25
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:34:48.940580",
+        "event_type": "Process",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "docker.exe run -d app_18",
+          "process_id": 6547
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 27
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:38:08.279940",
+        "event_type": "File",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "file_name": "document_901.docx",
+          "action": "FileAccessed",
+          "hash": "a9058888b46c64e5412b956a5130231c6ccc27a7b6d740f2a9bd8ae6ea223274"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 23
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:38:22.027625",
+        "event_type": "Network",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "remote_ip": "10.5.76.22",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 24
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:41:11.552179",
+        "event_type": "Network",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "remote_ip": "10.10.229.146",
+          "remote_port": 80,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 28
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:41:27.326090",
+        "event_type": "Network",
+        "device_name": "user-aes57j",
+        "user_name": "jane.smith",
+        "details": {
+          "remote_ip": "10.4.149.55",
+          "remote_port": 53,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_smith_user-aes57j",
+          "alert_index": 26
+        }
+      }
+    ],
+    "first_alert": "2025-07-18T01:03:36.070565",
+    "last_alert": "2025-07-18T01:41:27.326090",
+    "event_types": [
+      "Network",
+      "Process",
+      "File"
+    ],
+    "attack_indicators": [],
+    "alert_count": 29,
+    "is_attack_session": false,
+    "avg_attack_intensity": 0,
+    "risk_score": 100,
+    "is_suspicious": true
+  },
+  "david_johnson_user_1l5dv2": {
+    "session_id": "david_johnson_user_1l5dv2",
+    "user_name": "david.johnson",
+    "device_name": "user-1l5dv2",
+    "alerts": [
+      {
+        "timestamp": "2025-07-18T01:42:52.070565",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "david.johnson",
+        "details": {
+          "file_name": "code.exe",
+          "command_line": "python.exe script_69.py",
+          "process_id": 6905
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "david_johnson_user-1l5dv2",
+          "alert_index": 3
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:42:52.070565",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "david.johnson",
+        "details": {
+          "file_name": "docker.exe",
+          "command_line": "python.exe script_13.py",
+          "process_id": 1354
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "david_johnson_user-1l5dv2",
+          "alert_index": 2
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:42:52.070565",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "david.johnson",
+        "details": {
+          "file_name": "docker.exe",
+          "command_line": "python.exe -version",
+          "process_id": 9389
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "david_johnson_user-1l5dv2",
+          "alert_index": 1
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:44:17.378004",
+        "event_type": "File",
+        "device_name": "user-1l5dv2",
+        "user_name": "david.johnson",
+        "details": {
+          "file_name": "document_634.yml",
+          "action": "FileAccessed",
+          "hash": "706b57c2331292351ea5330dd598076e97a1e1c9055f5512ddad197ff4c014e3"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "david_johnson_user-1l5dv2",
+          "alert_index": 7
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:46:08.450973",
+        "event_type": "File",
+        "device_name": "user-1l5dv2",
+        "user_name": "david.johnson",
+        "details": {
+          "file_name": "document_657.json",
+          "action": "FileDeleted",
+          "hash": "390c4531d2e4c0799ceae69381f3e1f56c65fbee54004758333ac8a205aac749"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "david_johnson_user-1l5dv2",
+          "alert_index": 0
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:46:11.713086",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "david.johnson",
+        "details": {
+          "file_name": "docker.exe",
+          "command_line": "npm.exe install package_17",
+          "process_id": 3118
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "david_johnson_user-1l5dv2",
+          "alert_index": 6
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:47:16.432536",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "david.johnson",
+        "details": {
+          "file_name": "git.exe",
+          "command_line": "docker.exe run -d app_16",
+          "process_id": 5884
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "david_johnson_user-1l5dv2",
+          "alert_index": 5
+        }
+      },
+      {
+        "timestamp": "2025-07-18T01:48:34.829524",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "david.johnson",
+        "details": {
+          "file_name": "node.exe",
+          "command_line": "docker.exe -version",
+          "process_id": 9482
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "david_johnson_user-1l5dv2",
+          "alert_index": 4
+        }
+      }
+    ],
+    "first_alert": "2025-07-18T01:42:52.070565",
+    "last_alert": "2025-07-18T01:48:34.829524",
+    "event_types": [
+      "Process",
+      "File"
+    ],
+    "attack_indicators": [],
+    "alert_count": 8,
+    "is_attack_session": false,
+    "avg_attack_intensity": 0,
+    "risk_score": 35,
+    "is_suspicious": false
+  },
+  "mike_jones_user_1l5dv2": {
+    "session_id": "mike_jones_user_1l5dv2",
+    "user_name": "mike.jones",
+    "device_name": "user-1l5dv2",
+    "alerts": [
+      {
+        "timestamp": "2025-07-18T02:07:48.070565",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "96.249.24.151",
+          "remote_port": 80,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 0
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:13:19.980656",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "38.210.18.203",
+          "remote_port": 3389,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 2
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:13:23.957459",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "96.32.156.88",
+          "remote_port": 443,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 1
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:15:58.918372",
+        "event_type": "File",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "document_841.py",
+          "action": "FileDeleted",
+          "hash": "812fe24f179caf5b1168449ab7db98ffa9ca984d952c5d4c77c13b61771acfdc"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 4
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:21:21.642636",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "38.143.3.254",
+          "remote_port": 443,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 3
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:25:40.713363",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "python.exe",
+          "command_line": "docker.exe -version",
+          "process_id": 3800
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 5
+        }
+      },
+      {
+        "timestamp": "2025-07-21T11:31:41.070565",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "node.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 4093
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 0
+        }
+      },
+      {
+        "timestamp": "2025-07-21T11:32:09.976167",
+        "event_type": "File",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "document_79.json",
+          "action": "FileDeleted",
+          "hash": "36c8e3b8d1b325c24e7e6d3c00fb99dc3a95021b9766b5c6d374ea4fe323a877"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 3
+        }
+      },
+      {
+        "timestamp": "2025-07-21T11:33:02.705593",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "202.133.29.26",
+          "remote_port": 443,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 1
+        }
+      },
+      {
+        "timestamp": "2025-07-21T11:34:00.910864",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "node.exe",
+          "command_line": "npm.exe install package_7",
+          "process_id": 4035
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 2
+        }
+      },
+      {
+        "timestamp": "2025-07-21T11:37:28.708495",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "code.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 3395
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 5
+        }
+      },
+      {
+        "timestamp": "2025-07-21T11:38:01.069816",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "34.194.5.155",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 4
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:22:49.070565",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "scada.exe",
+          "command_line": "autocad.exe -version",
+          "process_id": 1488
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 0
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:22:49.070565",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "scada.exe",
+          "command_line": "docker.exe run -d app_11",
+          "process_id": 6855
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 1
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:28:21.098872",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "192.168.8.143",
+          "remote_port": 443,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 6
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:28:52.285378",
+        "event_type": "File",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "document_614.dwg",
+          "action": "FileAccessed",
+          "hash": "f4a29429af6f30ed7def4129a44275266850c60c228494d8f783a13d62ce3ea9"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 2
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:30:11.664731",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "202.167.241.149",
+          "remote_port": 80,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 3
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:31:08.046482",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "191.102.222.246",
+          "remote_port": 80,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 4
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:32:47.979917",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "212.76.142.216",
+          "remote_port": 22,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 9
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:32:59.138666",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "182.236.242.237",
+          "remote_port": 80,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 5
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:35:44.365590",
+        "event_type": "File",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "document_7.step",
+          "action": "FileDeleted",
+          "hash": "738c24f506699e77182a1be9e4f5c0ba569bc4f74ee83d115d6fd36d2cb8f5d1"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 8
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:37:55.051150",
+        "event_type": "File",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "document_566.step",
+          "action": "FileAccessed",
+          "hash": "98f395d6b0579ddc7b017ad3dee6e0b01c17c7cf87a3f3d9ec0d7bb94b96a7c3"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 7
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:39:37.336371",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "192.168.7.58",
+          "remote_port": 443,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 10
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:39:50.291608",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "1.221.164.129",
+          "remote_port": 3389,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 12
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:40:11.832548",
+        "event_type": "File",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "document_201.xlsx",
+          "action": "FileDeleted",
+          "hash": "59e3fff4b0b3181f6ab3605ea55142f6e209d790e69c8766ef13eb6567d3a6f8"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 13
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:41:29.837634",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "scada.exe",
+          "command_line": "docker.exe run -d app_12",
+          "process_id": 4693
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 11
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:48:07.229993",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "192.168.7.203",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 14
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:51:08.542320",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "192.168.10.58",
+          "remote_port": 53,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 15
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:51:19.960502",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "plc_software.exe",
+          "command_line": "python.exe script_66.py",
+          "process_id": 6065
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 16
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:51:33.436082",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "scada.exe",
+          "command_line": "docker.exe run -d app_2",
+          "process_id": 9990
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 17
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:51:56.948139",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "192.168.2.27",
+          "remote_port": 22,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 19
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:52:08.819951",
+        "event_type": "File",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "document_63.log",
+          "action": "FileDeleted",
+          "hash": "c31e3d9816091de5abe3d67a0d24d218da635107bade05552d536f3b3f789cb0"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 18
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:53:06.093665",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "17.136.152.204",
+          "remote_port": 53,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 20
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:57:55.254525",
+        "event_type": "File",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "document_174.log",
+          "action": "FileModified",
+          "hash": "b535b9470c23e7333ebfb69a453ef597fc664690a138260a45a679294f13d57b"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 24
+        }
+      },
+      {
+        "timestamp": "2025-07-21T14:58:27.278934",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "solidworks.exe",
+          "command_line": "python.exe script_54.py",
+          "process_id": 8802
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 21
+        }
+      },
+      {
+        "timestamp": "2025-07-21T15:00:05.655674",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "scada.exe",
+          "command_line": "npm.exe install package_33",
+          "process_id": 7915
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 22
+        }
+      },
+      {
+        "timestamp": "2025-07-21T15:02:05.780935",
+        "event_type": "File",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "document_720.step",
+          "action": "FileDeleted",
+          "hash": "abce64e7bfa1b09c02a4b15c23cf373b05c8f45f10bf68636055c9806251d361"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 23
+        }
+      },
+      {
+        "timestamp": "2025-07-21T15:03:10.072510",
+        "event_type": "File",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "document_671.dwg",
+          "action": "FileModified",
+          "hash": "065a401f26849d345ddfe2438d52f083d26141d3f716ae46154095132d451805"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 27
+        }
+      },
+      {
+        "timestamp": "2025-07-21T15:03:38.287807",
+        "event_type": "File",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "document_749.dwg",
+          "action": "FileModified",
+          "hash": "fcd2f5399cbfc6993c0ae90b34757488ca8f5876df002fda0bc2a0faec76e54b"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 26
+        }
+      },
+      {
+        "timestamp": "2025-07-21T15:05:16.270766",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "192.168.7.16",
+          "remote_port": 80,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 28
+        }
+      },
+      {
+        "timestamp": "2025-07-21T15:06:20.710244",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "192.168.7.171",
+          "remote_port": 22,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 25
+        }
+      },
+      {
+        "timestamp": "2025-07-21T15:13:10.269794",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "scada.exe",
+          "command_line": "docker.exe run -d app_13",
+          "process_id": 3830
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 33
+        }
+      },
+      {
+        "timestamp": "2025-07-21T15:13:23.881272",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "scada.exe",
+          "command_line": "python.exe script_95.py",
+          "process_id": 2115
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 30
+        }
+      },
+      {
+        "timestamp": "2025-07-21T15:13:29.334291",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "192.168.4.109",
+          "remote_port": 53,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 29
+        }
+      },
+      {
+        "timestamp": "2025-07-21T15:14:55.625719",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "scada.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 2669
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 34
+        }
+      },
+      {
+        "timestamp": "2025-07-21T15:16:27.203261",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "autocad.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 7332
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 32
+        }
+      },
+      {
+        "timestamp": "2025-07-21T15:16:33.276681",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "autocad.exe",
+          "command_line": "python.exe script_19.py",
+          "process_id": 4874
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 31
+        }
+      },
+      {
+        "timestamp": "2025-07-21T15:17:08.876635",
+        "event_type": "Network",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "remote_ip": "192.168.8.88",
+          "remote_port": 22,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 36
+        }
+      },
+      {
+        "timestamp": "2025-07-21T15:19:29.989964",
+        "event_type": "File",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "document_766.step",
+          "action": "FileAccessed",
+          "hash": "cde62383cfeb546444d468578093e38e18bf721e8f01371eedcbe1623caf4956"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 35
+        }
+      },
+      {
+        "timestamp": "2025-07-21T15:26:11.417317",
+        "event_type": "Process",
+        "device_name": "user-1l5dv2",
+        "user_name": "mike.jones",
+        "details": {
+          "file_name": "solidworks.exe",
+          "command_line": "python.exe script_100.py",
+          "process_id": 4109
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "mike_jones_user-1l5dv2",
+          "alert_index": 37
+        }
+      }
+    ],
+    "first_alert": "2025-07-18T02:07:48.070565",
+    "last_alert": "2025-07-21T15:26:11.417317",
+    "event_types": [
+      "Process",
+      "Network",
+      "File"
+    ],
+    "attack_indicators": [],
+    "alert_count": 50,
+    "is_attack_session": false,
+    "avg_attack_intensity": 0,
+    "risk_score": 100,
+    "is_suspicious": true
+  },
+  "jane_jones_dev_x2w6pb": {
+    "session_id": "jane_jones_dev_x2w6pb",
+    "user_name": "jane.jones",
+    "device_name": "dev-x2w6pb",
+    "alerts": [
+      {
+        "timestamp": "2025-07-18T02:24:24.133358",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.10.241.132",
+          "remote_port": 80,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 0
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:27:35.328620",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.4.189.193",
+          "remote_port": 443,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 2
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:27:50.726906",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.2.20.89",
+          "remote_port": 22,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 1
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:28:38.759174",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_706.docx",
+          "action": "FileAccessed",
+          "hash": "fa6442fe32b6379ec7e3c8c2e075f8107e55b681fbe42c0e0db454c8749cc61f"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 3
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:38:19.547401",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.3.165.203",
+          "remote_port": 53,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 4
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:39:43.280518",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 7376
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 5
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:40:06.181670",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "docker.exe run -d app_6",
+          "process_id": 5591
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 6
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:45:14.885141",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.5.142.191",
+          "remote_port": 53,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 7
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:48:54.005005",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.5.127.123",
+          "remote_port": 53,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 9
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:49:20.669973",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_926.pdf",
+          "action": "FileDeleted",
+          "hash": "cf593ffd1cd68a3e3b109fb405885e470dbe12dc71979ee08ce74a6758630953"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 8
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:52:50.448956",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "java.exe -version",
+          "process_id": 6767
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 10
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:56:02.342430",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_439.msg",
+          "action": "FileAccessed",
+          "hash": "e84e78b7d0f1879bb4c2d43495cb9a5b103ba24fd7c7fbea8465f61552092d0f"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 11
+        }
+      },
+      {
+        "timestamp": "2025-07-18T02:56:38.678429",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "npm.exe install package_29",
+          "process_id": 5126
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 12
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:00:04.092610",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.5.114.43",
+          "remote_port": 443,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 13
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:04:33.946568",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_192.msg",
+          "action": "FileModified",
+          "hash": "11400a3915d588771518e9a80f610e62f4989a1348c5cd9862fb323680c6622e"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 14
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:09:31.983561",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "python.exe script_29.py",
+          "process_id": 9808
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 15
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:14:50.493247",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_552.xlsx",
+          "action": "FileAccessed",
+          "hash": "c9c6fd0ea78db3dbce306ef7983d8506f1a8b144bea6ee23f0e3164210552d42"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 17
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:16:19.869900",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.8.41.50",
+          "remote_port": 443,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 16
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:16:24.130130",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.10.201.210",
+          "remote_port": 3389,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 19
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:17:52.118036",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "bloomberg.exe -version",
+          "process_id": 8524
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 18
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:21:05.605189",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_450.pdf",
+          "action": "FileCreated",
+          "hash": "bc3e4a8894ba74a18c067b35fe891b2dc7729e87e023b226805e3c0e768e1d6f"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 20
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:28:25.053225",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_26.csv",
+          "action": "FileDeleted",
+          "hash": "3403839ced256e0ea9bcaa48c88eb150c24542f390d518a6fd2be7cb4f00f20e"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 21
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:31:07.014076",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_922.docx",
+          "action": "FileAccessed",
+          "hash": "9cfb4910e99af7f16db78bfd12bfd619087e7d67743d3fc0d39f137850fb3377"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 22
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:34:42.582317",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "docker.exe run -d app_2",
+          "process_id": 7348
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 25
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:36:03.197231",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "excel.exe -version",
+          "process_id": 6297
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 23
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:37:04.053697",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "npm.exe install package_29",
+          "process_id": 9719
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 26
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:38:33.537854",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_768.xlsx",
+          "action": "FileCreated",
+          "hash": "b80232b115e06fe0b2978a0fd4699feeb5c4342573c742e03116eeefa7c36d08"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 24
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:42:31.852683",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "outlook.exe",
+          "command_line": "python.exe script_11.py",
+          "process_id": 9797
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 28
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:43:38.269046",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_547.xlsx",
+          "action": "FileCreated",
+          "hash": "5590f6e409eb719dd917bc63e752a5a4d3e0f4148b1e692f1fe7c27ffba2359a"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 27
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:52:44.793209",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.1.31.167",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 29
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:53:44.056492",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "outlook.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 7495
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 30
+        }
+      },
+      {
+        "timestamp": "2025-07-18T03:55:18.078534",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_56.xlsx",
+          "action": "FileDeleted",
+          "hash": "394b42e5b6ae7858a38ccda69bd1b198effcf0f7a257585cef4993b438258713"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 31
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:00:19.821278",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "outlook.exe",
+          "command_line": "docker.exe run -d app_12",
+          "process_id": 1245
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 34
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:02:04.994636",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.9.52.157",
+          "remote_port": 22,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 32
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:02:57.619711",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_646.docx",
+          "action": "FileCreated",
+          "hash": "d9f5a2256758fbcca6456292289ca9eebe102eb0f7d75a61abdad7f48779a215"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 33
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:08:11.315373",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 3929
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 36
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:08:15.476249",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.2.252.115",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 35
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:13:21.896131",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_242.docx",
+          "action": "FileAccessed",
+          "hash": "be52f626da2a2b4187566ac834464fbb29a14714addd1378fcf9f86acbccb506"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 37
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:18:55.933495",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.8.61.33",
+          "remote_port": 80,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 38
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:21:23.794632",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "excel.exe -version",
+          "process_id": 6818
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 40
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:23:41.239234",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "npm.exe install package_20",
+          "process_id": 6501
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 39
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:24:29.855752",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.6.37.246",
+          "remote_port": 22,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 41
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:30:59.099390",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_957.docx",
+          "action": "FileCreated",
+          "hash": "1eaaec83644b10ba37690d23054f601e4a2a02f31cd37c76a4fd8c8126e91db9"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 43
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:31:42.722298",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_417.pdf",
+          "action": "FileDeleted",
+          "hash": "55d9fcb376c56b13306ada4d4b5de33759f4d26d7e618f055153b546a28ddc73"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 42
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:33:47.900296",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "outlook.exe -version",
+          "process_id": 6356
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 45
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:34:30.619277",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.1.184.35",
+          "remote_port": 53,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 44
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:39:58.197002",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.8.85.198",
+          "remote_port": 22,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 46
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:41:15.518340",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.9.110.205",
+          "remote_port": 443,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 48
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:44:33.409869",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "outlook.exe -version",
+          "process_id": 4485
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 47
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:46:22.005719",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_304.docx",
+          "action": "FileDeleted",
+          "hash": "83cda6496c8a843703b226d3fae1a660485880d7f38f011c72ba3d93428143ba"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 49
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:49:11.996092",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.7.34.3",
+          "remote_port": 22,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 50
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:59:10.425325",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_506.xlsx",
+          "action": "FileModified",
+          "hash": "6879c6995d8b4ce243d799980fa16165f095c6c8f3a1ddfd266d209c6680a60d"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 54
+        }
+      },
+      {
+        "timestamp": "2025-07-18T04:59:13.856019",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "outlook.exe",
+          "command_line": "docker.exe run -d app_13",
+          "process_id": 1994
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 51
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:00:34.510885",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_719.csv",
+          "action": "FileCreated",
+          "hash": "85f5e2411e78f8cc2c3937f9d0531d8dd39fb55fb558668d3b2a61caba7d0ba4"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 53
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:02:07.266021",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_913.msg",
+          "action": "FileCreated",
+          "hash": "7d444bb0b0ea9cb7f265aa63b4514775dd42c2fd49bf570fed3714488dafed99"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 52
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:06:07.150861",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_386.pdf",
+          "action": "FileModified",
+          "hash": "b7c5a1ad4faf959e9f9b6946d69267d121a4af1d3b3eda28cf4f82ab2b2589ea"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 56
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:09:51.886124",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "excel.exe -version",
+          "process_id": 6108
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 55
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:13:50.826341",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_766.csv",
+          "action": "FileDeleted",
+          "hash": "9f46f5bb19f3ccb529161b80119cdae271a146ff06860932dc961e09e645c59f"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 58
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:16:30.526309",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.3.66.64",
+          "remote_port": 3389,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 57
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:22:22.001887",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.1.196.63",
+          "remote_port": 80,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 62
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:22:48.768128",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_364.msg",
+          "action": "FileCreated",
+          "hash": "734a7295d8f9737c1a1e5e25db54f454378dcd520fad299b3b5f9d06818e75ae"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 59
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:23:22.173142",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.10.102.11",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 61
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:24:51.839118",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.3.142.102",
+          "remote_port": 53,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 60
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:29:17.675200",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.3.138.76",
+          "remote_port": 80,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 63
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:29:23.942808",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.9.102.33",
+          "remote_port": 22,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 64
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:34:30.619132",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.1.64.248",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 65
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:36:38.009390",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "npm.exe install package_16",
+          "process_id": 6575
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 66
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:38:55.574992",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.7.62.45",
+          "remote_port": 53,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 67
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:45:10.803167",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.3.31.208",
+          "remote_port": 53,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 68
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:46:13.742718",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.1.199.186",
+          "remote_port": 80,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 69
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:50:39.205010",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_310.msg",
+          "action": "FileModified",
+          "hash": "538480480e8c232c74d43220bf64ab340dbc1cc3e2c3aa676271996af6e75758"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 70
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:56:52.233208",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 7794
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 72
+        }
+      },
+      {
+        "timestamp": "2025-07-18T05:57:14.996591",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.4.20.153",
+          "remote_port": 53,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 71
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:02:36.091185",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_613.msg",
+          "action": "FileModified",
+          "hash": "51a541b5845238ee8e29be0656143a02bd5ff2b9f31e8af87a6b8eb3b1b65e0d"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 73
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:02:46.247544",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "outlook.exe",
+          "command_line": "python.exe script_9.py",
+          "process_id": 6411
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 75
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:03:07.245209",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "docker.exe run -d app_14",
+          "process_id": 2948
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 74
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:07:03.093194",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.3.176.99",
+          "remote_port": 22,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 76
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:09:15.921393",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.8.71.114",
+          "remote_port": 53,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 77
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:13:11.883920",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.3.195.117",
+          "remote_port": 443,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 79
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:18:29.801459",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "python.exe script_81.py",
+          "process_id": 2409
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 78
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:22:34.539023",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_988.csv",
+          "action": "FileDeleted",
+          "hash": "ae922de0582b4fbf69a4e97d705bb8c9b5b1f82ed66e6829e4b6ec9573ae9d3e"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 80
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:23:44.922810",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.6.29.63",
+          "remote_port": 53,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 81
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:27:13.682436",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_755.csv",
+          "action": "FileModified",
+          "hash": "e55354be3ec629627f7a7378d2b23312e324900851aaeb497582d93cd8f26446"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 83
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:28:38.541153",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "docker.exe run -d app_8",
+          "process_id": 6922
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 84
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:30:25.680768",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "bloomberg.exe -version",
+          "process_id": 1894
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 82
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:31:58.372940",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "outlook.exe",
+          "command_line": "docker.exe run -d app_5",
+          "process_id": 4927
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 85
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:41:57.355080",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_380.msg",
+          "action": "FileAccessed",
+          "hash": "ffcf1f820c25c8ccc3d9fe1cdfefa7c2a5e0fcc71d0e86b92ad7785853540541"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 86
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:42:35.592285",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.6.157.228",
+          "remote_port": 53,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 89
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:42:41.065482",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "outlook.exe",
+          "command_line": "python.exe script_56.py",
+          "process_id": 6023
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 87
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:46:59.062303",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_497.msg",
+          "action": "FileModified",
+          "hash": "9051c96118e5e6ad619a49eb61419048054215bc33ccdb282698a374e6d08b9f"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 88
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:50:40.553348",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "npm.exe install package_21",
+          "process_id": 1787
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 92
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:51:35.131397",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 7981
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 90
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:54:04.286485",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_985.pdf",
+          "action": "FileCreated",
+          "hash": "7dec5f702c466b67862704828ef9db9860722157e7c407da60c7a590bde2b354"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 93
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:55:20.488595",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "npm.exe install package_48",
+          "process_id": 3508
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 91
+        }
+      },
+      {
+        "timestamp": "2025-07-18T06:57:13.770041",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_814.xlsx",
+          "action": "FileAccessed",
+          "hash": "074840644cefb49b9d7ea5e2e9f926dde6c9833a0b07a009a2c29a27920f112d"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 94
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:02:07.748499",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_196.pdf",
+          "action": "FileDeleted",
+          "hash": "d8ce1cb228c2fde41d4d03a65fbbe3aa9bb7d2d1fb111b96bbe16756ce867e0b"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 95
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:08:38.415014",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 1352
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 98
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:11:11.475451",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.4.104.120",
+          "remote_port": 53,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 99
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:11:29.983094",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_900.csv",
+          "action": "FileDeleted",
+          "hash": "db9dddbf29c08e704b6d2aa871f43028982b2242f0458f5e4ccbb3dc21268bb6"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 96
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:14:12.853953",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 3383
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 97
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:23:11.372745",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_194.docx",
+          "action": "FileCreated",
+          "hash": "56e64ab7c677d23fee52c1b9cbfa709239854b6ad2ce11a49fbfcb750c159c32"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 100
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:24:16.543936",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.7.135.58",
+          "remote_port": 53,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 101
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:24:48.133270",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.7.189.229",
+          "remote_port": 443,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 102
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:31:08.978723",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_283.xlsx",
+          "action": "FileCreated",
+          "hash": "a5e93e844ec5fe50b872c4710790a21b795e9cb4e75f3d361b2b61ef729db160"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 103
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:31:27.830208",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.7.143.229",
+          "remote_port": 443,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 105
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:32:33.053311",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "excel.exe -version",
+          "process_id": 1971
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 104
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:34:34.374259",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_683.xlsx",
+          "action": "FileAccessed",
+          "hash": "cf3f34a4bc310e3380614ee7c0c2bdfa8b1fd10152c9ff96f308dbf7710b620d"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 107
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:40:23.921490",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_459.pdf",
+          "action": "FileAccessed",
+          "hash": "36a3b092bf64fdaa8bf9618fd9a057c5f6187792549389fb57119be0dd71a17a"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 106
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:42:54.428091",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_645.msg",
+          "action": "FileDeleted",
+          "hash": "a8d0978e2fdb61fe221756518bf37e647b7adcc930d697ff5336ca5e9666267a"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 108
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:45:34.495714",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "npm.exe install package_44",
+          "process_id": 5966
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 110
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:47:51.048104",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.1.72.195",
+          "remote_port": 22,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 109
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:54:02.361879",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.6.203.161",
+          "remote_port": 443,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 111
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:58:13.968821",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.1.150.124",
+          "remote_port": 22,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 112
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:58:28.099185",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "npm.exe install package_29",
+          "process_id": 7827
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 115
+        }
+      },
+      {
+        "timestamp": "2025-07-18T07:59:37.508975",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "outlook.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 6563
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 113
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:02:01.148010",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.10.193.5",
+          "remote_port": 3389,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 114
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:03:53.625782",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_757.msg",
+          "action": "FileDeleted",
+          "hash": "5253376264dcc3fd05de256d2d93a5f8ee84f191f57f008df74b9db1db4512e8"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 116
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:06:27.119614",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "python.exe script_21.py",
+          "process_id": 4251
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 117
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:09:58.738023",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 4936
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 119
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:10:40.007454",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "docker.exe run -d app_19",
+          "process_id": 1606
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 118
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:15:23.513845",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 4588
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 121
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:16:51.731177",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.4.200.119",
+          "remote_port": 80,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 120
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:26:03.509065",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_505.csv",
+          "action": "FileCreated",
+          "hash": "61ebb9c2013b2df6aab3ee96dc7e4bc9c08ef31f5c5b529bc052340b14d4f0d1"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 123
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:27:42.914982",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.9.217.221",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 125
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:27:56.881678",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_334.xlsx",
+          "action": "FileCreated",
+          "hash": "1d5202a5980d0db1c2f13ee5cc5b259b95e841b31a9f902b1ad3154154b24ee1"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 122
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:29:53.445899",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 7942
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 124
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:34:22.788128",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_454.docx",
+          "action": "FileAccessed",
+          "hash": "bdd4d5d3300980314c045095589bc49d397e839a7a852363a76c77b7ae8e23a3"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 126
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:41:40.141068",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "python.exe script_17.py",
+          "process_id": 9953
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 127
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:44:04.015448",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.6.173.221",
+          "remote_port": 22,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 128
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:45:12.806964",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.10.56.145",
+          "remote_port": 443,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 130
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:47:28.027945",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_588.xlsx",
+          "action": "FileAccessed",
+          "hash": "af4030bfd6482595fad668ea4fe8c159a3442a778a8e067f3276867df1fc58cd"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 129
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:48:43.375921",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "python.exe script_22.py",
+          "process_id": 8174
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 132
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:50:44.722819",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.1.72.154",
+          "remote_port": 443,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 131
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:55:27.950208",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 9550
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 134
+        }
+      },
+      {
+        "timestamp": "2025-07-18T08:57:26.568912",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.2.243.232",
+          "remote_port": 53,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 133
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:06:19.448566",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 5612
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 135
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:06:40.974747",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "python.exe script_58.py",
+          "process_id": 9727
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 136
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:10:30.799517",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_10.docx",
+          "action": "FileAccessed",
+          "hash": "1f6f1dbc5a5c061b70a98df5a72497f01f8d3927a7934317a7d6918e693f7aa9"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 138
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:10:56.700817",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "python.exe script_15.py",
+          "process_id": 9018
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 137
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:14:36.924218",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 8244
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 140
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:17:38.499409",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_446.pdf",
+          "action": "FileAccessed",
+          "hash": "e795347503e91c0865f7499da2929cd79af6563980d52cd6521337ce77650ed0"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 139
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:19:53.849988",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "npm.exe install package_46",
+          "process_id": 8593
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 142
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:21:11.323951",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "docker.exe run -d app_4",
+          "process_id": 2099
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 141
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:25:06.159517",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_387.docx",
+          "action": "FileAccessed",
+          "hash": "b6583a37d3741fd4d3d38d8e65ef04a65f4698b15cac3ed09d04a8c1498e9325"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 143
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:30:08.265580",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.3.121.176",
+          "remote_port": 22,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 144
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:30:26.263658",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.10.151.254",
+          "remote_port": 443,
+          "protocol": "UDP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 146
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:33:38.637116",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_99.xlsx",
+          "action": "FileDeleted",
+          "hash": "51ffe899d4c1975bc4e411035dd9acbb83aa986fbebd038f2f418e922bb54f2e"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 145
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:34:14.311531",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "bloomberg.exe -version",
+          "process_id": 7392
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 147
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:39:10.691166",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "excel.exe",
+          "command_line": "python.exe script_79.py",
+          "process_id": 3267
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 148
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:42:15.525092",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_175.pdf",
+          "action": "FileCreated",
+          "hash": "07ffd6fe018220b715316724c5e35683b05b9c9a3df50413902f4e9bd2a8978e"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 149
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:48:08.342216",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.4.193.47",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 150
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:50:50.267098",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "outlook.exe",
+          "command_line": "npm.exe install package_39",
+          "process_id": 5842
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 151
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:55:02.607295",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "outlook.exe -version",
+          "process_id": 2425
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 152
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:55:57.933196",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_808.pdf",
+          "action": "FileModified",
+          "hash": "f7de0c6b1fcb069fb4d2d02cb44dd59828cb13f7eedcf5cfdb5b12f7858e2415"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 153
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:59:10.482473",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "docker.exe run -d app_1",
+          "process_id": 2117
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 155
+        }
+      },
+      {
+        "timestamp": "2025-07-18T09:59:55.203106",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.8.165.3",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 154
+        }
+      },
+      {
+        "timestamp": "2025-07-18T10:04:20.837106",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_344.pdf",
+          "action": "FileModified",
+          "hash": "f6489458bbecbec5aea3e1ea60d45ab4ab3d881d1ef9b33bd5548dcb7ee3d22f"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 156
+        }
+      },
+      {
+        "timestamp": "2025-07-18T10:08:53.630610",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.2.113.127",
+          "remote_port": 3389,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 157
+        }
+      },
+      {
+        "timestamp": "2025-07-18T10:09:37.087415",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_698.msg",
+          "action": "FileModified",
+          "hash": "386b30d146137d33f6ca875ea5d56ec8deaed11ad5c2362ced5d55d98cc02364"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 158
+        }
+      },
+      {
+        "timestamp": "2025-07-18T10:10:54.704063",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_243.msg",
+          "action": "FileModified",
+          "hash": "f54590b77cbd439b4a71f1ee02d3941414eeb121fb167babacd0524f1829ac69"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 159
+        }
+      },
+      {
+        "timestamp": "2025-07-18T10:13:35.654468",
+        "event_type": "Network",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "remote_ip": "10.10.188.147",
+          "remote_port": 80,
+          "protocol": "TCP"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 160
+        }
+      },
+      {
+        "timestamp": "2025-07-18T10:13:45.793843",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "python.exe script_51.py",
+          "process_id": 7740
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 161
+        }
+      },
+      {
+        "timestamp": "2025-07-18T10:21:28.961692",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_979.xlsx",
+          "action": "FileAccessed",
+          "hash": "a592c3b1fe6c1488a32badb6c6a6aa90e7f0ad99c1c47f89f3d76e885462d24d"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 163
+        }
+      },
+      {
+        "timestamp": "2025-07-18T10:25:51.009990",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "java.exe",
+          "command_line": "npm.exe install package_44",
+          "process_id": 4354
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 162
+        }
+      },
+      {
+        "timestamp": "2025-07-18T10:28:31.644236",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_782.docx",
+          "action": "FileCreated",
+          "hash": "c53c8de52a75a6852b1cb6a38fa66c83bffc514eb89bad3dc240aad3fb6ef2fe"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 165
+        }
+      },
+      {
+        "timestamp": "2025-07-18T10:29:45.460064",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_567.msg",
+          "action": "FileCreated",
+          "hash": "7e9764bdcbda36cff59cbe95d409ce547a81bb8d7705ab328e96377a8079b097"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 164
+        }
+      },
+      {
+        "timestamp": "2025-07-18T10:34:36.048040",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "docker.exe run -d app_13",
+          "process_id": 2267
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 166
+        }
+      },
+      {
+        "timestamp": "2025-07-18T10:36:43.424182",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_161.msg",
+          "action": "FileModified",
+          "hash": "e430483ce26a952301355c33018de97d841af167c306037e845ab839f2166aa0"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 168
+        }
+      },
+      {
+        "timestamp": "2025-07-18T10:39:59.864828",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_552.pdf",
+          "action": "FileCreated",
+          "hash": "f07fe19c630b7505398945f552cfba53d609964d857968971d6b3dd9b488134e"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 167
+        }
+      },
+      {
+        "timestamp": "2025-07-18T10:41:32.986788",
+        "event_type": "File",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "document_545.msg",
+          "action": "FileAccessed",
+          "hash": "c30ef9fa535cae1eb7de4809bb6d03821a404e58f80357be4937406cc3b9bb40"
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 169
+        }
+      },
+      {
+        "timestamp": "2025-07-18T10:41:35.943048",
+        "event_type": "Process",
+        "device_name": "dev-x2w6pb",
+        "user_name": "jane.jones",
+        "details": {
+          "file_name": "bloomberg.exe",
+          "command_line": "git.exe pull origin main",
+          "process_id": 2533
+        },
+        "raw": {
+          "source": "synthetic_generator",
+          "session_id": "jane_jones_dev-x2w6pb",
+          "alert_index": 170
+        }
+      }
+    ],
+    "first_alert": "2025-07-18T02:24:24.133358",
+    "last_alert": "2025-07-18T10:41:35.943048",
+    "event_types": [
+      "Process",
+      "Network",
+      "File"
+    ],
+    "attack_indicators": [],
+    "alert_count": 171,
+    "is_attack_session": false,
+    "avg_attack_intensity": 0,
+    "risk_score": 100,
+    "is_suspicious": true
+  }
+}

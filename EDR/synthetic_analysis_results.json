@@ -1,0 +1,14 @@
+{
+  "total_alerts": 47329,
+  "total_sessions": 1527,
+  "suspicious_sessions": 895,
+  "llm_analyzed": 895,
+  "attack_sessions_embedded": 13,
+  "detection_accuracy": 0.01452513966480447,
+  "session_breakdown": {
+    "safe": 632,
+    "medium_risk": 286,
+    "high_risk": 1,
+    "critical": 608
+  }
+}
